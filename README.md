@@ -15,12 +15,10 @@ Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied
  - **RFRKT**: Random forest classifier write from scratch in Racket.
  - **RFRLP**: Random forest classifier write from scratch in Lisp.
 
-_license: BSD 3-Clause License
-_Copyright (c) 2018, Israel Gonçalves de Oliveira
-_All rights reserved.
+_license_: BSD 3-Clause License. _Copyright_ (c) 2018, Israel Gonçalves de Oliveira. _All rights_ reserved.
 
 
-## Based on fallow project:
+## Based on following project:
 
 Understanding Random Forests
 ============================
