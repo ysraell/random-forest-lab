@@ -1,6 +1,20 @@
-# random-forest-lab
-Experimental and didactic laboratory for learning Decision Tree and Random Forest.
+# Laboratory of Decision Tree and Random Forest (random-forest-lab)
+## Experimental and didactic laboratory for learning Decision Tree and Random Forest.
 
+Datasets:
+1) Adult Data Set: Predict whether income exceeds $50K/yr based on census data. Also known as "Census Income" dataset.
+*Link:* https://archive.ics.uci.edu/ml/datasets/Adult
+A good reference for this dataset: https://github.com/PAIR-code/facets (see Facets Dive).
+
+2) THE MNIST DATABASE of handwritten digits.
+*Link:*: http://yann.lecun.com/exdb/mnist/
+Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
+
+ - **DTCPY**: Decision tree classifier write from scratch in Python 3 using Jupyter Notebook.
+
+_license: BSD 3-Clause License
+_Copyright (c) 2018, Israel Gonçalves de Oliveira
+_All rights reserved.
 
 
 ## Based on fallow project:
