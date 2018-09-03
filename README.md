@@ -1,7 +1,7 @@
 # Laboratory of Decision Tree and Random Forest (random-forest-lab)
 ## Experimental and didactic laboratory for learning Decision Tree and Random Forest.
 
-Datasets:
+- **databases**:
 1) Adult Data Set: Predict whether income exceeds $50K/yr based on census data. Also known as "Census Income" dataset.
 
 *Link:* https://archive.ics.uci.edu/ml/datasets/Adult
@@ -22,7 +22,7 @@ Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied
 _license_: BSD 3-Clause License. _Copyright_ (c) 2018, Israel Gonçalves de Oliveira. _All rights_ reserved.
 
 
-## Based on following project:
+## Based on following project (using the same references table):
 
 Understanding Random Forests
 ============================
