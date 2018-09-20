@@ -16,8 +16,7 @@ Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied
 
  - **DTCPY**: Decision tree classifier write from scratch in Python 3 using Jupyter Notebook.
  - **RFCPY**: Random forest classifier write from scratch in Python 3 using Jupyter Notebook.
- - **RFRKT**: Random forest classifier write from scratch in Racket.
- - **RFRLP**: Random forest classifier write from scratch in Lisp.
+ - **RFCLP**: Random forest classifier write from scratch in Lisp.
 
 _license_: BSD 3-Clause License. _Copyright_ (c) 2018, Israel Gonçalves de Oliveira. _All rights_ reserved.
 
