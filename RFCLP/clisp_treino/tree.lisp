@@ -35,37 +35,16 @@
     )
 )
 
-(defun coinv ()
-    (let ((toss (random 101)))
-        (cond   ((< toss 25) 'A)
-                ((> toss 25) 
-                    (cond   ((< toss 50) 'A)
-                            ((> toss 50) 'A)
-                            (t (coinv))
-                    )
-                )
-                (t (coinv))
-        )
-    )
-)
-
 (defun gen-sample (Ns)
     (let ((sample (list (target))))
         (dotimes (i Ns)
-            (setf sample (cons (coin) sample))        
+            (setf sample (cons (coin) sample))
         )
+        (setf sample (cons 'ROOT sample))
         (return-from gen-sample sample)
     )
 )
 
-(defun gen-samplev (Ns)
-    (let ((sample (list (target))))
-        (dotimes (i Ns)
-            (setf sample (cons (coinv) sample))        
-        )
-        (return-from gen-samplev sample)
-    )
-)
 
 ;(defvar *SS* 5)
 ;(defvar *sample* (gen-sample *SS*))
@@ -167,6 +146,21 @@
   or nil if this node does not have any siblings."
   (cdr tree))
 
+(defun next-sibling-null (tree)
+  "Returns a reference to the next sibling of the node passed in,
+  or nil if this node does not have any siblings."
+  (cond 
+    (
+        (null (cdr tree))
+        (cdr tree)
+    )
+    (
+        t
+        (next-sibling-null (cdr tree))
+    )
+  )
+)
+
 (defun data (tree)
   "Returns the information contained in this node."
   (car (car tree)))
@@ -177,6 +171,13 @@
   which will be modified."
   (nconc (car tree) child)
   tree)
+
+(defun add-brother (tree child)
+    "Takes two nodes created with 'make-tree' and adds the
+    second node as a child of the first. Returns the first node,
+    which will be modified."
+    (nconc tree child)
+    tree)
 
 (defun make-tree-ex ()
   (let ((one (make-tree 1)))
@@ -227,7 +228,7 @@
 )
 
 (defun create-tree (sample)
-    (let ((tree (make-tree '(root 1))))
+    (let ((tree (make-tree '(TREE 1))))
         (create-branch tree sample)
         (car tree)
     )
@@ -237,8 +238,6 @@
     (cond
         (
             (null (cdr sample))
-            ;(format t "~S~%~%" sample)
-            ;tree
             (cond
                 (
                     (equal (car (car tree)) (car sample))
@@ -255,9 +254,29 @@
             (grow-tree (first-child tree) (cdr sample))
         )
         (
+            (not (null (next-sibling tree)))
+            (format t "#####INI~%")
+            (format t "~S~%" sample)
+            (format t "~S~%" tree)
+            (format t "~S~%" (next-sibling tree))
+            (format t "#####END~%")
+            (grow-tree (next-sibling tree) sample)
+
+        )
+        (
             t
-            (add-child tree (make-tree (car sample)))
+            (format t "#####INI~%")
+            (format t "~S~%" sample)
+            (format t "~S~%" tree)
+            (format t "~S~%" (next-sibling tree))
+            (format t "#####END~%")
+            (add-brother tree (make-tree (car sample)))
             (create-branch (next-sibling tree) (cdr sample))
+            (format t "#####INI2~%")
+            (format t "~S~%" sample)
+            (format t "~S~%" tree)
+            (format t "~S~%" (next-sibling tree))
+            (format t "#####END~%")
         )
 
     )
@@ -266,22 +285,18 @@
 (defun build-tree (Ns)
     (let* 
         (
-            (sample (gen-sample 5))
+            (sample (gen-sample 3))
             (tree (create-tree sample))
         )
         (dotimes (n Ns)
-            (setf sample (gen-sample 5))
-            (print "Antes grow")
-            (format t "~S~%" tree)
+            (setf sample (gen-sample 3))
             (grow-tree (cdr tree) sample)
-            (print "Depois grow")
-            (format t "~S~%" tree)
         )
         tree
     )
 )
 
-(defvar tree (build-tree 10))
+(defvar tree (build-tree 100))
 (show-tree tree)
 
 ;EOF
