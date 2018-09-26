@@ -255,28 +255,13 @@
         )
         (
             (not (null (next-sibling tree)))
-            (format t "#####INI~%")
-            (format t "~S~%" sample)
-            (format t "~S~%" tree)
-            (format t "~S~%" (next-sibling tree))
-            (format t "#####END~%")
             (grow-tree (next-sibling tree) sample)
 
         )
         (
             t
-            (format t "#####INI~%")
-            (format t "~S~%" sample)
-            (format t "~S~%" tree)
-            (format t "~S~%" (next-sibling tree))
-            (format t "#####END~%")
             (add-brother tree (make-tree (car sample)))
             (create-branch (next-sibling tree) (cdr sample))
-            (format t "#####INI2~%")
-            (format t "~S~%" sample)
-            (format t "~S~%" tree)
-            (format t "~S~%" (next-sibling tree))
-            (format t "#####END~%")
         )
 
     )
@@ -285,18 +270,18 @@
 (defun build-tree (Ns)
     (let* 
         (
-            (sample (gen-sample 3))
+            (sample (gen-sample 5))
             (tree (create-tree sample))
         )
         (dotimes (n Ns)
-            (setf sample (gen-sample 3))
+            (setf sample (gen-sample 5))
             (grow-tree (cdr tree) sample)
         )
         tree
     )
 )
 
-(defvar tree (build-tree 100))
+(defvar tree (build-tree 400))
 (show-tree tree)
 
 ;EOF
