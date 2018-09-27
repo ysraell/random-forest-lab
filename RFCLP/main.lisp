@@ -38,6 +38,21 @@
     )
 )
 
-;(defvar tree (build-tree-limt (read)))
+
+(defun use-tree-full (tree)
+    (let (
+            (i 0)
+            )
+        (cl-csv:do-csv (row #P"adult.test_fix")
+            (if (> (use-tree (cdr tree) (cons 'ROOT row)) 0)
+                (incf i 1)
+            )
+        )
+        i
+    )
+)
+
 (defvar tree (build-tree-full))
-(show-tree tree)
+(format t "~S~%" (use-tree-full tree))
+
+;EOF

@@ -281,7 +281,44 @@
     )
 )
 
+
+(defun use-tree (tree sample)
+    (cond
+        (
+            (null (cdr sample))
+            (cond
+                (
+                    (equal (car (car tree)) (car sample))
+                    (- (caar (cdr tree)) (caar (cdddr tree)))
+                )
+                (
+                    t
+                    (- (caar (cdddr tree)) (caar (cdr tree)))
+                )
+            )  
+        )
+        (
+            (equal (data tree) (car sample))
+            (use-tree (first-child tree) (cdr sample))
+        )
+        (
+            (not (null (next-sibling tree)))
+            (use-tree (next-sibling tree) sample)
+        )
+        (
+            t
+            '0
+        )
+    )
+)
+
 (defvar tree (build-tree 400))
-(show-tree tree)
+(dotimes (i (read))
+    (format t "~S~%" (use-tree (cdr tree) (gen-sample 5)))
+)
+;(show-tree tree)
+
+
+
 
 ;EOF
