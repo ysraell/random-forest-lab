@@ -5,6 +5,8 @@
 
 (setf *random-state* (make-random-state t))
 (load "sdraw.generic")
+(load "rand_perm.lisp")
+
 
 (defvar targets '("Head" "Tail"))
 
@@ -234,6 +236,13 @@
     )
 )
 
+(defun create-tree-rfs (sample rfs-config)
+    (let ((tree (make-tree rfs-config)))
+        (create-branch tree sample)
+        (car tree)
+    )
+)
+
 (defun grow-tree (tree sample)
     (cond
         (
@@ -282,6 +291,46 @@
 )
 
 
+(defun rfs-gen-config ()
+    (lotto-select (+ 2 (random 4)) 5)
+)
+
+(defun rfs-set-config (new-sample rfs-config sample)
+    (setf new-sample (cons (nth (car rfs-config) sample) new-sample))
+    (cond
+        (
+            (null (cdr rfs-config))
+            (setf new-sample (cons (first sample) new-sample))
+            new-sample
+        )
+        (
+            t
+            (rfs-set-config new-sample (cdr rfs-config) sample)
+        )
+    )
+)
+
+(defun build-tree-rfs (Ns)
+    (let* 
+        (
+            (sample '())
+            (tree '())
+            (rfs-config (rfs-gen-config))
+        )
+        (dotimes (n Ns)
+            (setf sample (gen-sample 5))
+            
+            (setf sample (rfs-set-config (last sample) rfs-config sample))
+            (if (null tree)
+                (setf tree (create-tree-rfs sample rfs-config))
+            )
+            (grow-tree (cdr tree) sample)
+        )
+        tree
+    )
+)
+
+
 (defun use-tree (tree sample)
     (cond
         (
@@ -312,13 +361,30 @@
     )
 )
 
-(defvar tree (build-tree 400))
-(dotimes (i (read))
-    (format t "~S~%" (use-tree (cdr tree) (gen-sample 5)))
-)
+;(defvar tree (build-tree 400))
+
 ;(show-tree tree)
 
 
 
+;(defvar tree (build-tree-rfs 3))
+;(show-tree tree)
+;(defvar sample (gen-sample 5))
+;(show-tree sample)
+;(show-tree (rfs-set-config (last sample) (rfs-gen-config) sample))
+;(show-tree (lotto-select 5 5))
+
+(defvar tree (build-tree-rfs 400))
+(show-tree tree)
+(let
+(
+    (sample '())
+)
+    (dotimes (i (read))
+        (setf sample (gen-sample 5))
+        (setf sample (rfs-set-config (last sample) (car tree) sample))
+        (format t "~S~%" (use-tree (cdr tree) sample))
+    )
+)
 
 ;EOF

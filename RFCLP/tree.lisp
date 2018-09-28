@@ -1,47 +1,12 @@
 ;;;;;;;;;;;;;;;;;;;
-
+(load "rand_perm.lisp")
+(load "/root/quicklisp/setup.lisp")
+(load "load-sample.lisp")
 
 ; Generate samples with random values A, B and C.
 
 (setf *random-state* (make-random-state t))
 (defvar targets '("<=50K" ">50K"))
-
-(defun target ()
-  (let ((toss (random 101)))
-  (cond ((< toss 50) 
-          (car targets)
-        )
-        ((> toss 50) 
-          (car (cdr targets))
-        )
-        (t (target))
-    )
-  )
-)
-
-(defun coin ()
-    (let ((toss (random 101)))
-        (cond   ((< toss 25) 'A)
-                ((> toss 25) 
-                    (cond   ((< toss 50) 'B)
-                            ((> toss 50) 'C)
-                            (t (coin))
-                    )
-                )
-                (t (coin))
-        )
-    )
-)
-
-(defun gen-sample (Ns)
-    (let ((sample (list (target))))
-        (dotimes (i Ns)
-            (setf sample (cons (coin) sample))
-        )
-        (setf sample (cons 'ROOT sample))
-        (return-from gen-sample sample)
-    )
-)
 
 (defun make-node (data)
   "Creates a new node that contains 'data' as its data."
@@ -153,19 +118,7 @@
     )
 )
 
-(defun build-tree-dev (Ns)
-    (let* 
-        (
-            (sample (gen-sample 5))
-            (tree (create-tree sample))
-        )
-        (dotimes (n Ns)
-            (setf sample (gen-sample 5))
-            (grow-tree (cdr tree) sample)
-        )
-        tree
-    )
-)
+
 
 (defun use-tree (tree sample)
     (cond
@@ -194,6 +147,168 @@
             t
             '0
         )
+    )
+)
+
+(defun rfs-gen-config (SS mSS)
+    (lotto-select (+ mSS (random (+ (- SS mSS) 1))) SS)
+)
+
+(defun rfs-set-config (new-sample rfs-config sample)
+    (setf new-sample (cons (nth (car rfs-config) sample) new-sample))
+    (cond
+        (
+            (null (cdr rfs-config))
+            (setf new-sample (cons (first sample) new-sample))
+            new-sample
+        )
+        (
+            t
+            (rfs-set-config new-sample (cdr rfs-config) sample)
+        )
+    )
+)
+
+(defun create-tree-rfs (sample rfs-config)
+    (let ((tree (make-node rfs-config)))
+        (create-branch tree sample)
+        (car tree)
+    )
+)
+
+(defun build-tree-limt (Ts)
+    (let (
+            (tree '())
+            (i 0)
+            (rfs-config (rfs-gen-config))
+            )
+        (cl-csv:do-csv (row #P"adult.data")
+            (incf i 1)
+            (if (equal i 1)
+                (setf tree (create-tree (cons 'ROOT row)))
+                (grow-tree (cdr tree) (cons 'ROOT row))
+            )
+            (when (equal i Ts)
+                (return-from build-tree-limt tree)
+            )
+        )
+        tree
+    )
+)
+
+(defun build-tree-limt-rfs (Ts)
+    (let (
+            (tree '())
+            (sample '())
+            (i 0)
+            (rfs-config (rfs-gen-config 7 2))
+            )
+        (cl-csv:do-csv (row #P"adult.data")
+            (incf i 1)
+            (setf sample (rfs-set-config (last row) rfs-config (cons 'ROOT row)))
+            (cond
+                (
+                    (null tree)
+                    (setf tree (create-tree-rfs sample rfs-config))
+                )
+                (
+                    t
+                    (grow-tree (cdr tree) sample)
+                )
+            )
+            (when (equal i Ts)
+                (return-from build-tree-limt-rfs tree)
+            )
+        )
+        tree
+    )
+)
+
+(defun build-tree-full-rfs ()
+    (let (
+            (tree '())
+            (sample '())
+            (rfs-config (rfs-gen-config))
+            )
+        (cl-csv:do-csv (row #P"adult.data")
+            (setf sample (rfs-set-config (last sample) rfs-config (cons 'ROOT row)))
+            (if (null tree)
+                (setf tree (create-tree-rfs sample rfs-config))
+                (grow-tree (cdr tree) sample)
+            )
+        )
+        tree
+    )
+)
+
+(defun build-tree-rfs-dev (Ns)
+    (let* 
+        (
+            (sample '())
+            (tree '())
+            (rfs-config (rfs-gen-config))
+        )
+        (dotimes (n Ns)
+            (setf sample (gen-sample 5))
+            
+            (setf sample (rfs-set-config (last sample) rfs-config sample))
+            (if (null tree)
+                (setf tree (create-tree-rfs sample rfs-config))
+            )
+            (grow-tree (cdr tree) sample)
+        )
+        tree
+    )
+)
+
+(defun build-tree-full ()
+    (let (
+            (tree '())
+            (i 0)
+            )
+        (cl-csv:do-csv (row #P"adult.data_fix")
+            (incf i 1)
+            (if (equal i 1)
+                (setf tree (create-tree (cons 'ROOT row)))
+                (grow-tree (cdr tree) (cons 'ROOT row))
+            )
+        )
+        tree
+    )
+)
+
+
+(defun use-tree-full (tree)
+    (let (
+            (i 0)
+            )
+        (cl-csv:do-csv (row #P"adult.test_fix")
+            (if (> (use-tree (cdr tree) (cons 'ROOT row)) 0)
+                (incf i 1)
+            )
+        )
+        i
+    )
+)
+
+
+(defun use-tree-full-rfs (tree)
+    (let (
+            (i 0)
+            (n 0)
+            (sample '())
+            (valor 0)
+            )
+        (cl-csv:do-csv (row #P"adult.test_fix")
+            (setf sample (rfs-set-config (last row) (car tree) (cons 'ROOT row)))
+            (setf valor (use-tree (cdr tree) sample))
+            ;(format t "~S~%" valor)
+            (if (> valor 0)
+                (incf i 1)
+            )
+            (incf n 1)
+        )
+        (/ i n)
     )
 )
 
