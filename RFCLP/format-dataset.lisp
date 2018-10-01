@@ -28,7 +28,7 @@
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
     (cl-csv:do-csv (row #P"adult.data_fix")
         (convert-data row num-index)
-        (format stream "~S~%" row)
+        (print row stream)
     )
 )
 
@@ -36,7 +36,7 @@
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
     (cl-csv:do-csv (row #P"adult.data_test_fix2")
         (convert-data row num-index)
-        (format stream "~S~%" row)
+        (print row stream)
     )
 )
 
