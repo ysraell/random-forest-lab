@@ -42,8 +42,8 @@
 )
 
 
-(defun get-values2 (pos)
-    (with-open-file (file "dataset.train" :direction :input)
+(defun get-values2 (pos filename)
+    (with-open-file (file filename :direction :input)
         (let ((out '()))
             (setf out (build-velues out file pos))
             out
@@ -52,41 +52,40 @@
 )
 
 ;(median (get-values2 pos))
-(defun gen-medians (med num pos)
+(defun gen-medians (med num pos filename)
     (cond
         (
             (null num)
-            med
+            (reverse med)
         ) 
         (
             (zerop (car num))
-            (gen-medians (cons '0 med) (cdr num) (+ pos 1))
+            (gen-medians (cons '0 med) (cdr num) (+ pos 1) filename)
         )
         (
             (equal (car num) '1)
-            (setf med (cons (median (get-values2 pos)) med))
-            (gen-medians med (cdr num) (+ pos 1))
+            (gen-medians (cons (median (get-values2 pos filename)) med) (cdr num) (+ pos 1) filename)
         )
     )
 )
 
-(defun convert-nun-cat (tmp med num)
+(defun convert-nun-cat (tmp tmp2 med num)
     (cond
         (
             (null num)
-            tmp
+            (reverse tmp2)
         ) 
         (
             (zerop (car num))
-            (convert-nun-cat (cdr tmp) (cdr med) (cdr num))
+            (convert-nun-cat (cdr tmp) (cons (car tmp) tmp2) (cdr med) (cdr num))
         )
         (
             (equal (car num) '1)
             (if (< (car tmp) (car med))
-                (setf (car tmp) "A")
-                (setf (car tmp) "B")
+                (setf tmp2 (cons "A" tmp2))
+                (setf tmp2 (cons "B" tmp2))
             )
-            (convert-nun-cat (cdr tmp) (cdr med) (cdr num))
+            (convert-nun-cat (cdr tmp) tmp2 (cdr med) (cdr num))
         )
     )
 )
@@ -105,24 +104,30 @@
             )
             (
                 t
-                (print (convert-nun-cat tmp med num-index) data-des)
+                (print (convert-nun-cat tmp '() med num-index) data-des)
+                ;(format t "~S~%"  (convert-nun-cat tmp '() med num-index))
                 (apply-data data-ori data-des med)
             )
         )
     )    
 )
 
-(defun num-to-cat (med pos)
+(defun num-to-cat (med filename filename_cat)
     (let
         (
-            (data-ori (open "dataset.train" :direction :input))
-            (data-des (open "dataset.train_cat" 
+            (data-ori (open filename :direction :input))
+            (data-des (open filename_cat 
             :direction :output :if-exists :rename-and-delete :if-does-not-exist :create))
         )
-        (apply-data data-ori data-des med pos)
+        (apply-data data-ori data-des med)
     )
 )
 
 
-(format t "~S~%" (gen-medians '() num-index 0))
+;(format t "~S~%" (gen-medians '() num-index 0))
+;(format t "~S~%" (num-to-cat (gen-medians '() num-index 0)))
+(num-to-cat (gen-medians '() num-index 0 "dataset.train") "dataset.train" "dataset.train_cat")
+(num-to-cat (gen-medians '() num-index 0 "dataset.train") "dataset.test" "dataset.test_cat")
+
+;adult.data_test_fix2
 ;EOF
