@@ -1,0 +1,1000 @@
+("A" "Private" "B" "Some-college" "B" "Never-married" "Protective-serv"
+ "Own-child" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Divorced" "Other-service" "Unmarried"
+ "White" "Female" "B" "B" "B" "France" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "HS-grad" "A" "Never-married" "Farming-fishing"
+ "Not-in-family" "White" "Male" "B" "B" "B" "Poland" "<=50K") 
+("B" "?" "B" "HS-grad" "A" "Married-civ-spouse" "?" "Husband" "White" "Male"
+ "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "5th-6th" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Male" "B" "B" "B" "El-Salvador" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Machine-op-inspct"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Divorced" "Adm-clerical" "Unmarried" "White"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Craft-repair" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Divorced" "Prof-specialty" "Unmarried"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "B" "HS-grad" "A" "Divorced" "Adm-clerical" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Local-gov" "A" "Bachelors" "B" "Divorced" "Prof-specialty" "Unmarried"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "B" "1st-4th" "A" "Married-civ-spouse" "?" "Husband" "White" "Male"
+ "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-spouse-absent" "Adm-clerical"
+ "Own-child" "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "?" "B" "12th" "A" "Never-married" "?" "Other-relative" "Black" "Male" "B"
+ "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-spouse-absent" "Craft-repair"
+ "Unmarried" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "State-gov" "A" "Bachelors" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Some-college" "B" "Married-civ-spouse"
+ "Craft-repair" "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "Portugal" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service" "Unmarried"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "10th" "A" "Never-married" "Other-service" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Handlers-cleaners"
+ "Own-child" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "9th" "A" "Never-married" "Other-service" "Not-in-family"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Never-married" "Craft-repair"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-voc" "B" "Divorced" "Other-service" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Transport-moving"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "A" "Some-college" "B" "Never-married" "?" "Own-child" "White" "Male"
+ "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Never-married" "Prof-specialty"
+ "Unmarried" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Tech-support" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" ">50K") 
+("B" "Private" "B" "Masters" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Transport-moving" "Unmarried"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Tech-support"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "1st-4th" "A" "Married-spouse-absent" "Craft-repair"
+ "Unmarried" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-acdm" "B" "Never-married" "Farming-fishing"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "A" "Some-college" "B" "Married-civ-spouse" "?" "Husband" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Transport-moving"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Exec-managerial" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-voc" "B" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "Asian-Pac-Islander" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-not-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Sales" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "Assoc-acdm" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "Black" "Male" "B" "B" "B" "?" ">50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-inc" "B" "Some-college" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Machine-op-inspct"
+ "Own-child" "Black" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "B" "11th" "A" "Never-married" "?" "Own-child" "White" "Female" "B"
+ "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "Amer-Indian-Eskimo" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Widowed" "Exec-managerial" "Unmarried"
+ "Black" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "9th" "A" "Never-married" "Craft-repair" "Other-relative"
+ "White" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Federal-gov" "B" "HS-grad" "A" "Never-married" "Armed-Forces" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "A" "Some-college" "B" "Never-married" "Protective-serv"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "HS-grad" "A" "Never-married" "Farming-fishing"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Masters" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Craft-repair"
+ "Own-child" "Asian-Pac-Islander" "Male" "B" "B" "B" "Philippines" "<=50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Married-civ-spouse" "Other-service" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" ">50K") 
+("B" "Self-emp-not-inc" "B" "Bachelors" "B" "Married-spouse-absent"
+ "Prof-specialty" "Not-in-family" "White" "Female" "B" "B" "B" "United-States"
+ "<=50K") 
+("A" "?" "B" "11th" "A" "Never-married" "?" "Own-child" "White" "Male" "B" "B"
+ "B" "United-States" "<=50K") 
+("B" "?" "A" "HS-grad" "A" "Widowed" "?" "Not-in-family" "White" "Male" "B" "B"
+ "A" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Masters" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Handlers-cleaners"
+ "Not-in-family" "White" "Male" "B" "B" "B" "Dominican-Republic" "<=50K") 
+("A" "Federal-gov" "B" "Masters" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "10th" "A" "Never-married" "Craft-repair" "Unmarried"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Divorced" "Farming-fishing" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "State-gov" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "11th" "A" "Never-married" "Handlers-cleaners" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "B" "HS-grad" "A" "Divorced" "Transport-moving" "Unmarried"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "11th" "A" "Separated" "Machine-op-inspct" "Not-in-family"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "11th" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "1st-4th" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("A" "Private" "A" "12th" "A" "Divorced" "Craft-repair" "Not-in-family" "White"
+ "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "State-gov" "B" "Some-college" "B" "Married-civ-spouse"
+ "Machine-op-inspct" "Husband" "White" "Male" "B" "B" "B" "United-States"
+ "<=50K") 
+("B" "Private" "B" "Doctorate" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Divorced" "Exec-managerial" "Unmarried"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Handlers-cleaners"
+ "Unmarried" "Black" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "Some-college" "B" "Divorced" "Other-service"
+ "Not-in-family" "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "A" "Some-college" "B" "Married-civ-spouse" "?" "Wife" "White"
+ "Female" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-not-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Masters" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "7th-8th" "A" "Married-civ-spouse" "Handlers-cleaners"
+ "Husband" "Other" "Male" "B" "B" "B" "Puerto-Rico" "<=50K") 
+("A" "Private" "B" "Assoc-voc" "B" "Divorced" "Tech-support" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "State-gov" "B" "Bachelors" "B" "Married-civ-spouse" "Protective-serv"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Other-service"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Handlers-cleaners"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-inc" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "?" "A" "HS-grad" "A" "Never-married" "?" "Other-relative" "White"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Divorced" "Handlers-cleaners"
+ "Unmarried" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "?" ">50K") 
+("B" "Self-emp-not-inc" "B" "Assoc-acdm" "B" "Separated" "Craft-repair"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Craft-repair"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Other-service" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service"
+ "Other-relative" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Own-child" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Wife" "White" "Female" "B" "B" "A" "United-States" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Separated" "Machine-op-inspct"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Local-gov" "A" "Some-college" "B" "Married-civ-spouse" "Transport-moving"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Divorced" "Sales" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "5th-6th" "A" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Transport-moving" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Sales" "Husband" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Masters" "B" "Divorced" "Exec-managerial"
+ "Not-in-family" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Own-child" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Never-married" "Craft-repair" "Not-in-family"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "State-gov" "B" "Assoc-voc" "B" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" ">50K") 
+("A" "Private" "A" "11th" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Federal-gov" "B" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Unmarried" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Divorced" "Sales" "Unmarried" "White"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Divorced" "Exec-managerial" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Assoc-acdm" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "Some-college" "B" "Married-civ-spouse" "Sales"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-spouse-absent" "Sales"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Divorced" "Exec-managerial" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Masters" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "10th" "A" "Married-civ-spouse" "Other-service" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Self-emp-not-inc" "A" "9th" "A" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "Portugal" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-voc" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "11th" "A" "Widowed" "Other-service" "Unmarried" "Other"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "?" "B" "Bachelors" "B" "Married-civ-spouse" "?" "Husband" "White" "Male"
+ "B" "B" "B" "United-States" ">50K") 
+("B" "Local-gov" "B" "11th" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Other-service" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Prof-specialty" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-acdm" "B" "Married-spouse-absent" "Other-service"
+ "Not-in-family" "White" "Male" "B" "B" "A" "Iran" "<=50K") 
+("A" "?" "A" "Assoc-voc" "B" "Divorced" "?" "Unmarried" "White" "Female" "B"
+ "B" "B" "United-States" "<=50K") 
+("B" "?" "A" "11th" "A" "Married-civ-spouse" "?" "Husband" "White" "Male" "B"
+ "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "Bachelors" "B" "Never-married" "Sales"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "State-gov" "B" "Some-college" "B" "Never-married" "Protective-serv"
+ "Own-child" "Black" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Farming-fishing"
+ "Not-in-family" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "A" "HS-grad" "A" "Married-civ-spouse" "Protective-serv"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "Assoc-voc" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Other-service" "Husband"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Sales" "Unmarried" "Black"
+ "Male" "B" "B" "A" "Haiti" "<=50K") 
+("B" "Private" "A" "Masters" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Craft-repair"
+ "Other-relative" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "5th-6th" "A" "Never-married" "Other-service"
+ "Other-relative" "White" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "10th" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Assoc-voc" "B" "Never-married" "Other-service"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Adm-clerical"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Never-married" "Craft-repair"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Never-married" "Transport-moving"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "HS-grad" "A" "Married-civ-spouse"
+ "Handlers-cleaners" "Husband" "White" "Male" "B" "B" "B" "United-States"
+ "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Prof-specialty"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "?" "B" "Assoc-voc" "B" "Never-married" "?" "Own-child" "Black" "Female"
+ "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "HS-grad" "A" "Married-civ-spouse"
+ "Farming-fishing" "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Masters" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "11th" "A" "Never-married" "Exec-managerial" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Divorced" "Transport-moving" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "HS-grad" "A" "Married-civ-spouse"
+ "Exec-managerial" "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Widowed" "Other-service" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Tech-support"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "5th-6th" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Other-relative" "White" "Female" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Some-college" "B" "Married-civ-spouse" "Sales"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Machine-op-inspct"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Sales" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Self-emp-not-inc" "B" "Bachelors" "B" "Divorced" "Prof-specialty"
+ "Not-in-family" "Black" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "?" "B" "Some-college" "B" "Never-married" "?" "Own-child" "Black"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Masters" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "Asian-Pac-Islander" "Male" "B" "B" "A" "Taiwan" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-inc" "A" "Some-college" "B" "Married-civ-spouse"
+ "Farming-fishing" "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Assoc-acdm" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "Assoc-acdm" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Assoc-acdm" "B" "Never-married" "Tech-support"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Wife" "Asian-Pac-Islander" "Female" "B" "B" "B" "Laos" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Sales" "Husband" "White"
+ "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Other-service"
+ "Not-in-family" "Asian-Pac-Islander" "Female" "B" "B" "A" "United-States"
+ "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Sales" "Not-in-family" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Craft-repair" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "A" "Masters" "B" "Married-civ-spouse" "?" "Wife" "Asian-Pac-Islander"
+ "Female" "B" "B" "B" "?" "<=50K") 
+("B" "Self-emp-inc" "A" "Bachelors" "B" "Divorced" "Sales" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Tech-support" "Unmarried"
+ "Black" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Sales" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "Bachelors" "B" "Never-married" "Protective-serv"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Divorced" "Prof-specialty" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "7th-8th" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "Ecuador" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Divorced" "Other-service"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Prof-school" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Federal-gov" "B" "Masters" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Handlers-cleaners"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Divorced" "Prof-specialty" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Divorced" "Sales" "Unmarried" "Black"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "Some-college" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "A" "Germany" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Machine-op-inspct"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Tech-support"
+ "Own-child" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Handlers-cleaners"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Divorced" "Prof-specialty" "Own-child"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "Masters" "B" "Never-married" "Prof-specialty" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Masters" "B" "Married-civ-spouse"
+ "Farming-fishing" "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "9th" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "?" "B" "Some-college" "B" "Never-married" "?" "Own-child" "White" "Male"
+ "B" "B" "A" "Canada" "<=50K") 
+("B" "Self-emp-inc" "B" "Some-college" "B" "Married-civ-spouse"
+ "Exec-managerial" "Husband" "Asian-Pac-Islander" "Male" "B" "B" "B" "Thailand"
+ ">50K") 
+("A" "Private" "B" "11th" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "11th" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Sales" "Husband" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Divorced" "Prof-specialty" "Own-child"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "7th-8th" "A" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Assoc-voc" "B" "Widowed" "Exec-managerial" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Separated" "Other-service" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "HS-grad" "A" "Married-civ-spouse"
+ "Farming-fishing" "Husband" "Asian-Pac-Islander" "Male" "B" "B" "B" "Cambodia"
+ ">50K") 
+("B" "Private" "B" "Some-college" "B" "Never-married" "Transport-moving"
+ "Not-in-family" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Local-gov" "A" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "10th" "A" "Widowed" "Other-service" "Unmarried" "Black"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Adm-clerical" "Wife"
+ "Black" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Prof-school" "B" "Married-civ-spouse" "Prof-specialty"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "White" "Male" "B" "B" "B" "?" "<=50K") 
+("B" "Private" "B" "Assoc-acdm" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "White" "Male" "B" "B" "A" "?" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "A" "Some-college" "B" "Never-married" "?" "Own-child" "White" "Male"
+ "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "B" "Assoc-acdm" "B" "Married-civ-spouse" "Protective-serv"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Other-service"
+ "Wife" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Transport-moving" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "Masters" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "Iran" ">50K") 
+("B" "State-gov" "A" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "State-gov" "B" "HS-grad" "A" "Married-civ-spouse" "Other-service"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Prof-school" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Divorced" "Craft-repair"
+ "Other-relative" "Other" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Sales" "Unmarried" "Black"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "11th" "A" "Separated" "Transport-moving" "Not-in-family"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Assoc-voc" "B" "Widowed" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "A" "Columbia" "<=50K") 
+("B" "Self-emp-not-inc" "A" "HS-grad" "A" "Married-civ-spouse"
+ "Farming-fishing" "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "A" "10th" "A" "Divorced" "?" "Not-in-family" "Amer-Indian-Eskimo"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Sales" "Own-child" "White"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "Preschool" "A" "Never-married" "Machine-op-inspct"
+ "Not-in-family" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "Black" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "B" "1st-4th" "A" "Divorced" "?" "Not-in-family" "White" "Male" "B"
+ "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Handlers-cleaners"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "10th" "A" "Never-married" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "Poland" "<=50K") 
+("B" "Private" "B" "Assoc-acdm" "B" "Divorced" "Sales" "Not-in-family" "White"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-inc" "A" "7th-8th" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "Asian-Pac-Islander" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Sales" "Not-in-family"
+ "Amer-Indian-Eskimo" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Local-gov" "A" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "11th" "A" "Never-married" "Sales" "Own-child" "White"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Sales" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Other-service"
+ "Husband" "Black" "Male" "B" "B" "A" "United-States" ">50K") 
+("A" "Private" "A" "11th" "A" "Never-married" "Sales" "Own-child" "White"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "State-gov" "A" "HS-grad" "A" "Divorced" "Adm-clerical" "Unmarried"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Some-college" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "?" "A" "HS-grad" "A" "Never-married" "?" "Own-child" "White" "Male" "B"
+ "B" "B" "Italy" "<=50K") 
+("A" "Private" "B" "Masters" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Self-emp-not-inc" "A" "HS-grad" "A" "Never-married" "Sales"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Masters" "B" "Married-civ-spouse" "Prof-specialty"
+ "Other-relative" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Federal-gov" "A" "Masters" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "5th-6th" "A" "Married-civ-spouse" "Transport-moving"
+ "Other-relative" "White" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Federal-gov" "A" "Bachelors" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Bachelors" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Divorced" "Machine-op-inspct"
+ "Not-in-family" "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "State-gov" "A" "Doctorate" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" ">50K") 
+("A" "Private" "A" "Masters" "B" "Married-civ-spouse" "Prof-specialty" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "A" "Bachelors" "B" "Divorced" "?" "Not-in-family" "White" "Female"
+ "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Bachelors" "B" "Divorced" "Exec-managerial"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "A" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "7th-8th" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "Mexico" ">50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Craft-repair"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Divorced" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Some-college" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "Black" "Male" "B" "B" "A" "United-States" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Handlers-cleaners"
+ "Not-in-family" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Craft-repair" "Own-child"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-spouse-absent" "Sales" "Unmarried"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "A" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Craft-repair"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "State-gov" "A" "HS-grad" "A" "Married-civ-spouse" "Protective-serv"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "A" "Assoc-voc" "B" "Widowed" "Prof-specialty" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "11th" "A" "Never-married" "Handlers-cleaners" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "State-gov" "A" "Masters" "B" "Widowed" "Protective-serv" "Unmarried"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "B" "Assoc-acdm" "B" "Never-married" "Exec-managerial"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Divorced" "Other-service" "Unmarried"
+ "White" "Female" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Self-emp-not-inc" "B" "Masters" "B" "Married-civ-spouse" "Sales"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Exec-managerial"
+ "Not-in-family" "Asian-Pac-Islander" "Female" "B" "B" "B" "England" "<=50K") 
+("B" "Self-emp-inc" "A" "Masters" "B" "Divorced" "Exec-managerial" "Unmarried"
+ "Asian-Pac-Islander" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service" "Unmarried"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "A" "1st-4th" "A" "Divorced" "?" "Not-in-family" "White" "Female" "B"
+ "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Separated" "Other-service" "Other-relative"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "Some-college" "B" "Separated" "Sales" "Unmarried"
+ "Black" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Handlers-cleaners"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "B" "HS-grad" "A" "Divorced" "?" "Not-in-family" "White" "Male" "B"
+ "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Craft-repair" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Exec-managerial"
+ "Other-relative" "Asian-Pac-Islander" "Female" "B" "B" "B" "Philippines"
+ "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Some-college" "B" "Divorced" "Adm-clerical" "Unmarried"
+ "White" "Female" "B" "B" "A" "Mexico" "<=50K") 
+("B" "?" "A" "Some-college" "B" "Divorced" "?" "Not-in-family" "White" "Female"
+ "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "11th" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Widowed" "Other-service" "Unmarried" "White"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Other-service"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Transport-moving" "Unmarried"
+ "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Never-married" "Tech-support"
+ "Other-relative" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Assoc-voc" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Other-service"
+ "Own-child" "White" "Male" "B" "B" "A" "Mexico" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Sales" "Own-child"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-inc" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "Asian-Pac-Islander" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Sales" "Own-child"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-voc" "B" "Married-civ-spouse" "Adm-clerical" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "A" "Masters" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "Iran" ">50K") 
+("B" "Private" "A" "Assoc-acdm" "B" "Divorced" "Tech-support" "Not-in-family"
+ "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Other-service"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Never-married" "Sales" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "A" "HS-grad" "A" "Married-civ-spouse" "?" "Husband" "White" "Male"
+ "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-acdm" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Adm-clerical"
+ "Own-child" "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Wife" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Other-service"
+ "Own-child" "Black" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "B" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Exec-managerial"
+ "Own-child" "Black" "Male" "B" "B" "B" "Germany" "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Other-service"
+ "Own-child" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Assoc-voc" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-inc" "B" "Some-college" "B" "Married-civ-spouse" "Sales"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "9th" "A" "Married-civ-spouse" "Handlers-cleaners" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Machine-op-inspct"
+ "Own-child" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Sales" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Other-service"
+ "Husband" "White" "Male" "B" "B" "B" "Canada" ">50K") 
+("B" "Private" "A" "Prof-school" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Bachelors" "B" "Never-married" "Sales" "Other-relative"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Handlers-cleaners"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "HS-grad" "A" "Never-married" "Adm-clerical"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "11th" "A" "Never-married" "Handlers-cleaners" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "B" "10th" "A" "Never-married" "?" "Own-child" "White" "Female" "B"
+ "B" "A" "United-States" "<=50K") 
+("A" "Self-emp-inc" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Craft-repair" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Tech-support"
+ "Own-child" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Masters" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "Masters" "B" "Married-civ-spouse" "Exec-managerial"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Federal-gov" "B" "HS-grad" "A" "Never-married" "Other-service"
+ "Own-child" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-acdm" "B" "Divorced" "Exec-managerial" "Unmarried"
+ "White" "Female" "B" "B" "B" "England" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-not-inc" "B" "Doctorate" "B" "Married-civ-spouse"
+ "Prof-specialty" "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Local-gov" "A" "Some-college" "B" "Never-married" "Handlers-cleaners"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "Bachelors" "B" "Married-civ-spouse" "Protective-serv"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Sales" "Wife"
+ "Asian-Pac-Islander" "Female" "B" "B" "A" "?" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Divorced" "Machine-op-inspct"
+ "Unmarried" "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Divorced" "Craft-repair" "Unmarried"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Assoc-voc" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "B" "Doctorate" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "A" "9th" "A" "Never-married" "Sales" "Not-in-family" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Masters" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "HS-grad" "A" "Married-civ-spouse" "Protective-serv"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "B" "HS-grad" "A" "Divorced" "Sales" "Own-child" "White"
+ "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Divorced" "Craft-repair" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Sales" "Husband" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Other-service" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Other-service"
+ "Husband" "White" "Male" "B" "B" "B" "Cuba" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Sales" "Not-in-family"
+ "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Local-gov" "A" "7th-8th" "A" "Married-civ-spouse" "Farming-fishing"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "11th" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "?" "B" "10th" "A" "Married-civ-spouse" "?" "Husband" "White" "Male" "B"
+ "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "Assoc-acdm" "B" "Married-civ-spouse" "Adm-clerical"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Prof-specialty"
+ "Other-relative" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Machine-op-inspct"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Self-emp-not-inc" "A" "Bachelors" "B" "Married-civ-spouse" "Sales"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Bachelors" "B" "Separated" "Sales" "Own-child" "Black"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Never-married" "Prof-specialty"
+ "Own-child" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "?" "B" "Some-college" "B" "Never-married" "?" "Own-child" "White" "Male"
+ "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-inc" "B" "Some-college" "B" "Married-civ-spouse"
+ "Exec-managerial" "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Wife"
+ "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "Some-college" "B" "Divorced" "Adm-clerical" "Not-in-family"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Divorced" "Tech-support" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Doctorate" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "?" "B" "7th-8th" "A" "Married-spouse-absent" "?" "Not-in-family" "White"
+ "Male" "B" "B" "B" "?" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Adm-clerical" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Assoc-voc" "B" "Married-civ-spouse" "Other-service"
+ "Husband" "White" "Male" "B" "B" "B" "Puerto-Rico" "<=50K") 
+("B" "Private" "B" "5th-6th" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Private" "B" "Some-college" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-inc" "A" "HS-grad" "A" "Divorced" "Exec-managerial"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Federal-gov" "B" "Bachelors" "B" "Divorced" "Exec-managerial"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "Prof-school" "B" "Married-civ-spouse" "Prof-specialty"
+ "Wife" "White" "Female" "B" "B" "B" "Honduras" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Other-service" "Own-child"
+ "White" "Female" "B" "B" "A" "?" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Exec-managerial"
+ "Wife" "Other" "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Assoc-voc" "B" "Never-married" "Prof-specialty"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "State-gov" "A" "Assoc-voc" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Masters" "B" "Divorced" "Exec-managerial" "Unmarried"
+ "White" "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Married-civ-spouse" "Machine-op-inspct"
+ "Husband" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Federal-gov" "B" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Handlers-cleaners"
+ "Not-in-family" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "A" "HS-grad" "A" "Separated" "Adm-clerical" "Unmarried" "White"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "A" "Bachelors" "B" "Married-civ-spouse"
+ "Prof-specialty" "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "9th" "A" "Married-civ-spouse" "Machine-op-inspct" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Self-emp-not-inc" "B" "Assoc-acdm" "B" "Married-civ-spouse"
+ "Prof-specialty" "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Some-college" "B" "Married-civ-spouse" "Sales" "Husband"
+ "White" "Male" "B" "B" "A" "?" ">50K") 
+("A" "Private" "B" "HS-grad" "A" "Married-AF-spouse" "Adm-clerical" "Wife"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Machine-op-inspct"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "11th" "A" "Never-married" "Machine-op-inspct" "Unmarried"
+ "White" "Male" "B" "B" "B" "Puerto-Rico" "<=50K") 
+("A" "State-gov" "B" "Some-college" "B" "Married-civ-spouse" "Other-service"
+ "Husband" "Black" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Federal-gov" "A" "Some-college" "B" "Married-civ-spouse" "Adm-clerical"
+ "Own-child" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Divorced" "Exec-managerial" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "Some-college" "B" "Never-married" "Sales" "Own-child"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Local-gov" "B" "Assoc-acdm" "B" "Never-married" "Protective-serv"
+ "Not-in-family" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Married-civ-spouse" "Craft-repair" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Divorced" "Exec-managerial" "Not-in-family"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "?" "B" "Some-college" "B" "Married-civ-spouse" "?" "Husband"
+ "Asian-Pac-Islander" "Male" "B" "B" "B" "South" ">50K") 
+("A" "Private" "A" "HS-grad" "A" "Never-married" "Craft-repair" "Own-child"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Local-gov" "B" "Bachelors" "B" "Married-civ-spouse" "Tech-support"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "HS-grad" "A" "Divorced" "Tech-support" "Unmarried" "White"
+ "Female" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "11th" "A" "Married-civ-spouse" "Transport-moving" "Husband"
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Federal-gov" "A" "9th" "A" "Married-civ-spouse" "Farming-fishing"
+ "Husband" "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "HS-grad" "A" "Separated" "Other-service" "Unmarried"
+ "Black" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "Private" "B" "Doctorate" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" ">50K") 
+("B" "Self-emp-not-inc" "B" "Masters" "B" "Divorced" "Exec-managerial"
+ "Unmarried" "White" "Female" "B" "B" "B" "United-States" ">50K") 
+("B" "Private" "A" "11th" "A" "Married-civ-spouse" "Sales" "Husband" "White"
+ "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "B" "HS-grad" "A" "Never-married" "Machine-op-inspct"
+ "Unmarried" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Self-emp-not-inc" "A" "HS-grad" "A" "Never-married" "Farming-fishing"
+ "Own-child" "White" "Male" "B" "B" "A" "United-States" "<=50K") 
+("A" "Private" "B" "7th-8th" "A" "Married-civ-spouse" "Transport-moving"
+ "Husband" "Amer-Indian-Eskimo" "Male" "B" "B" "B" "Mexico" "<=50K") 
+("B" "Private" "A" "Assoc-voc" "B" "Married-civ-spouse" "Craft-repair"
+ "Husband" "Asian-Pac-Islander" "Male" "B" "B" "B" "?" ">50K") 
+("A" "Private" "B" "Assoc-acdm" "B" "Never-married" "Sales" "Not-in-family"
+ "Black" "Male" "B" "B" "B" "United-States" "<=50K") 
+("A" "Private" "A" "Bachelors" "B" "Never-married" "Adm-clerical" "Own-child"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("A" "State-gov" "A" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "Asian-Pac-Islander" "Male" "B" "B" "B" "India" ">50K") 
+(
