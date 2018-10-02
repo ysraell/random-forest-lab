@@ -25,7 +25,8 @@
 ;(format t "~S~%" (use-tree-full-rfs tree))
 
 
-(defvar forest (build-forest '() 1 10 0.0))
+(defvar forest (build-forest '() 10 100 0.0))
+;(format t "~S~%" forest)
 (format t "~S~%" (use-tree-forest-full-rfs forest))
 (format t "~S~%" (use-tree-full-rfs (car forest)))
 ;EOF

@@ -406,11 +406,13 @@
         (cond
             (
                 (null (cdr forest))
+                ;(format t "~S~%" sample)
                 (+ (use-tree (cdr (car forest)) sample) valor)
             )
             (
                 t
-                (use-forest (cdr forest) sample (+ (use-tree (cdr (car forest)) sample) valor))
+                ;(format t "~S~%" sample)
+                (use-forest (cdr forest) row (+ (use-tree (cdr (car forest)) sample) valor))
             )
         )
     )
@@ -445,7 +447,6 @@
         (
             (i 0)
             (n 0)
-            (sample '())
             (valor 0)
             (file (open filetest :direction :input))
         )
@@ -457,8 +458,8 @@
                 (equal row :EOF)
             )
             ;(format t "~S~%" row)
-            (setf valor (use-forest forest row valor))
-            (format t "~S~%" valor)
+            (setf valor (use-forest forest row 0))
+            ;(format t "~S~%" valor)
             (if (> valor 0)
                 (incf i 1)
             )

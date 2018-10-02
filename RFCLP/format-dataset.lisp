@@ -26,7 +26,7 @@
 
 (with-open-file (stream "dataset.train"
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
-    (cl-csv:do-csv (row #P"adult.data_fix")
+    (cl-csv:do-csv (row #P"adult.data_shuf")
         (convert-data row num-index)
         (print row stream)
     )
@@ -34,7 +34,7 @@
 
 (with-open-file (stream "dataset.test"
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
-    (cl-csv:do-csv (row #P"adult.data_test_fix2")
+    (cl-csv:do-csv (row #P"adult.test_shuf")
         (convert-data row num-index)
         (print row stream)
     )
