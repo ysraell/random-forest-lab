@@ -32709,4 +32709,12 @@
 ("B" "Local-gov" "B" "Masters" "B" "Divorced" "Other-service" "Not-in-family"
  "White" "Male" "B" "B" "B" "United-States" "<=50K") 
 ("A" "Private" "B" "Bachelors" "B" "Never-married" "Prof-specialty" "Own-child"
- "White" "Male" "B" "B" "B" "United-St
+ "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Divorced" "Prof-specialty" "Not-in-family"
+ "White" "Female" "B" "B" "A" "United-States" "<=50K") 
+("B" "?" "B" "HS-grad" "A" "Widowed" "?" "Other-relative" "Black" "Male" "B"
+ "B" "B" "United-States" "<=50K") 
+("B" "Private" "B" "Bachelors" "B" "Married-civ-spouse" "Prof-specialty"
+ "Husband" "White" "Male" "B" "B" "B" "United-States" "<=50K") 
+("B" "Private" "A" "Bachelors" "B" "Divorced" "Adm-clerical" "Own-child"
+ "Asian-Pac-Islander" "Male" "B" "B" "B" "United-States" "<=50K") 

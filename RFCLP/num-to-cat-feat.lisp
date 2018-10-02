@@ -1,8 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;
 (load "median.lisp")
 
-
-
 (defvar num-index '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0))
 
 (defun get-values (pos)
@@ -113,13 +111,15 @@
 )
 
 (defun num-to-cat (med filename filename_cat)
-    (let
-        (
-            (data-ori (open filename :direction :input))
-            (data-des (open filename_cat 
-            :direction :output :if-exists :rename-and-delete :if-does-not-exist :create))
+    (with-open-file (data-des filename_cat 
+        :direction :output :if-exists :rename-and-delete :if-does-not-exist :create)
+        (let
+            (
+                (data-ori (open filename :direction :input))
+                
+            )
+            (apply-data data-ori data-des med)
         )
-        (apply-data data-ori data-des med)
     )
 )
 

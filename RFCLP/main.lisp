@@ -24,29 +24,8 @@
 
 ;(format t "~S~%" (use-tree-full-rfs tree))
 
-(defun build-forest (forest num-trees nsamples min-prec)
-    (let*
-        (
-            (tree (build-tree-limt-rfs nsamples))
-            (valor (use-tree-full-rfs tree))
-        )
-        (cond
-            (
-                (< num-trees 0)
-                forest
-            )
-            (
-                (< valor min-prec)
-                (build-forest forest num-trees nsamples min-prec)
-            )
-            (
-                t
-                (build-forest (cons tree forest) (- num-trees 1) nsamples min-prec)
-            )
-        )
-    )
-)
 
-
-(format t "~S~%" (build-forest '() 3 10 0.0))
+(defvar forest (build-forest '() 1 10 0.0))
+(format t "~S~%" (use-tree-forest-full-rfs forest))
+(format t "~S~%" (use-tree-full-rfs (car forest)))
 ;EOF

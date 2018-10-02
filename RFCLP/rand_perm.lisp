@@ -1,5 +1,5 @@
 
-
+(setf *random-state* (make-random-state t))
 
 ;;; Fun��o que gera uma lista contendo todos os inteiros em   ;;;
 ;;; um dado intervalo. Se o inicio � menor que o final, gera  ;;;
