@@ -70,4 +70,10 @@
     (rnd-select (range 1 max-elem) num-elem))
 
 
+;;; A random funcion between 1-N
+
+;(defun random-user (N)
+;    (+ (random N) 1)
+;)
+
 ;EOF

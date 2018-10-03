@@ -10,7 +10,7 @@
 (format t "Formating data: CSV to Lists... ~%")
 
 ; CONVERT VAR num-fetures IN THIS:
-(defvar num-index '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0))
+(defvar *num-index* '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0))
 
 (defun convert-data (row num)
     (cond
@@ -33,7 +33,7 @@
 (with-open-file (stream "data_temp"
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
     (cl-csv:do-csv (row #P"dataset.training.csv")
-        (convert-data row num-index)
+        (convert-data row *num-index*)
         (print row stream)
     )
 )
@@ -41,7 +41,7 @@
 (with-open-file (stream "data_temp2"
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
     (cl-csv:do-csv (row #P"dataset.test.csv")
-        (convert-data row num-index)
+        (convert-data row *num-index*)
         (print row stream)
     )
 )
@@ -127,7 +127,7 @@
             )
             (
                 t
-                (print (convert-nun-cat tmp '() med num-index) data-des)
+                (print (convert-nun-cat tmp '() med *num-index*) data-des)
                 ;(format t "~S~%"  (convert-nun-cat tmp '() med num-index))
                 (apply-data data-ori data-des med)
             )
@@ -148,8 +148,8 @@
     )
 )
 
-(num-to-cat (gen-medians '() num-index 0 "data_temp") "data_temp" "dataset.training")
-(num-to-cat (gen-medians '() num-index 0 "data_temp") "data_temp2" "dataset.test")
+(num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp" "dataset.training")
+(num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp2" "dataset.test")
 (format t "Well done!~%")
 (format t "Cleaning temp data...~%")
 

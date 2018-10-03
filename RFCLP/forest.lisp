@@ -3,9 +3,6 @@
 (load "model-parm.lisp")
 (load "rand_perm.lisp")
 
-(defvar filetest "dataset.test")
-(defvar filetrain "dataset.training")
-(defvar fileprune "dataset.training")
 
 ;;;;;;; Tools for work with trees in lists ;;;;;;;
 
@@ -90,6 +87,41 @@
     )
 )
 
+(defun load-samples (filename Ts)
+ (let
+        (
+            (dataset '())
+            (i 0)
+            (file (open filename :direction :input))
+        )
+        (do
+            (
+                (row (read file nil :EOF) (read file nil :EOF))
+            )
+            (
+                (equal row :EOF)
+            )
+            (incf i 1)
+            (setf dataset (cons row dataset))
+            (when (equal i Ts)
+                (return-from load-samples dataset)
+            )
+        )
+        dataset
+    )
+)
+
+(defun random-access (lista)
+    (nth (random (length lista)) lista)
+)
+
+;;;;;;;;;;;;;;;;; Load datasets ;;;;;;;;;;;;;;;;;;;
+
+
+(defvar *filetest* (load-samples "dataset.test" *TSamples_test*))
+(defvar *filetrain* (load-samples "dataset.training" *TSamples_train*))
+(defvar *fileprune* (load-samples "dataset.training" *TSamples_train*))
+
 ;;;;;;;;;;;;;;;;;;; Tree part ;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Create the branch if the value's feature not exist.
@@ -100,9 +132,9 @@
         (
             (null (cdr sample))
             (add-child tree (make-node '1))
-            (if (equal (car sample) (car targets))
-                (add-child tree (make-node (car (cdr targets))))
-                (add-child tree (make-node (car targets)))
+            (if (equal (car sample) (car *targets*))
+                (add-child tree (make-node (car (cdr *targets*))))
+                (add-child tree (make-node (car *targets*)))
             )
             (add-child tree (make-node '0))
         )
@@ -122,7 +154,7 @@
     )
 )
 
-;;; Make the branchs and add points for targets (if the branch
+;;; Make the branchs and add points for *targets* (if the branch
 ;;; already exist).
 
 (defun grow-tree (tree sample)
@@ -165,18 +197,16 @@
         (
             (tree '())
             (sample '())
-            (i 0)
-            (rfs-config (rfs-gen-config 7 2))
-            (file (open filetrain :direction :input))
+            (rfs-config (rfs-gen-config *total-fetures* 2))
         )
         (do
             (
-                (row (read file nil :EOF) (read file nil :EOF))
+                (row (random-access *filetrain*) (random-access *filetrain*))
+                (i 0 (+ i 1))
             )
             (
-                (equal row :EOF)
+                (equal i Ts)
             )
-            (incf i 1)
             (setf sample (rfs-set-config (last row) rfs-config (cons 'ROOT row)))
             (cond
                 (
@@ -187,9 +217,6 @@
                     t
                     (grow-tree (cdr tree) sample)
                 )
-            )
-            (when (equal i Ts)
-                (return-from build-tree-limt-rfs tree)
             )
         )
         tree
@@ -231,36 +258,28 @@
 
 ;;; Pruning
 
-(defun use-tree-full-rfs-prune (tree nsamples)
+(defun use-tree-full-rfs (tree Ts database)
     (let
         (
             (i 0)
             (n 0)
             (sample '())
             (valor 0)
-            (file (open fileprune :direction :input))
         )
         (do
             (
-                (row (read file nil :EOF) (read file nil :EOF))
-                (j 1 (+ j 1))
+                (row (random-access database) (random-access database))
+                (j 0 (+ j 1))
             )
             (
-                (equal row :EOF)
+                (equal j Ts)
             )
-            (cond
-                (
-                    (> j nsamples)
-                    ;(format t "~S~%" row)
-                    (setf sample (rfs-set-config (last row) (car tree) (cons 'ROOT row)))
-                    (setf valor (use-tree (cdr tree) sample))
-                    ;(format t "~S~%" valor)
-                    (if (> valor 0)
-                        (incf i 1)
-                    )
-                    (incf n 1)
-                )
+            (setf sample (rfs-set-config (last row) (car tree) (cons 'ROOT row)))
+            (setf valor (use-tree (cdr tree) sample))
+            (if (> valor 0)
+                (incf i 1)
             )
+            (incf n 1)
         )
         (float (/ i n))
     )
@@ -272,7 +291,7 @@
     (let*
         (
             (tree (build-tree-limt-rfs nsamples))
-            (valor (use-tree-full-rfs-prune tree nsamples))
+            (valor (use-tree-full-rfs tree nsamples *fileprune*))
         )
         (cond
             (
@@ -312,20 +331,20 @@
     )
 )
 
-(defun use-tree-forest-full-rfs (forest)
+(defun use-tree-forest-full-rfs (forest Ts)
     (let
         (
             (i 0)
             (n 0)
             (valor 0)
-            (file (open filetest :direction :input))
         )
         (do
             (
-                (row (read file nil :EOF) (read file nil :EOF))
+                (row (random-access *filetest*) (random-access *filetest*))
+                (j 0 (+ j 1))
             )
             (
-                (equal row :EOF)
+                (equal j Ts)
             )
             ;(format t "~S~%" row)
             (setf valor (use-forest forest row 0))

@@ -1,10 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;
 
 (load "forest.lisp")
-(defvar forest-model (build-forest '() NTrees NSamples THPrec))
+(defvar forest-model (build-forest '() *NTrees* *NSamples* *THPrec*))
 (format t "Precision: ~S~%" 
-    (use-tree-forest-full-rfs forest-model
-    )
+    (use-tree-forest-full-rfs forest-model *TSamples_test*)
 )
 (let
     (
