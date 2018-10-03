@@ -4,7 +4,7 @@
 
 - Use the file's name  like that: "dataset.training.csv" and "dataset.test.csv".
 
-- Run te entaire code: train and test steps. After, save the model (like run 'make model').
+- Run te entaire code: train and test steps. After, save the model (like run 'make model') in `forest-model.lisp`. Just load, will appears forest-model variable.
 
 `$ make`
 
