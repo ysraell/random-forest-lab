@@ -18,7 +18,7 @@
 (defvar *THPrec* 0.6)
 
 ; Test rounds 
-(defvar *TRounds* 50)
+(defvar *TRounds* 20)
 ; Load the datasets to memory
 (defvar *TSamples_train* 30000)
 (defvar *TSamples_test* 10000)
