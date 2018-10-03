@@ -9,11 +9,11 @@
 
 ; Model parameters.
 ; Number os trees in the forest:
-(defvar NTrees 100)
+(defvar NTrees 3)
 ; How much samples will be used to build the trees?
-(defvar NSamples 100)
+(defvar NSamples 10)
 ; To prune the worst trees with low rating accuracy.
 ; Prune below THPrec.
-(defvar THPrec 0.2)
+(defvar THPrec 0.0)
 
 ;EOF
