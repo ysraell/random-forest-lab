@@ -1,0 +1,3 @@
+"The North Slope"
+((45 redwood) (12 oak) (43 maple))
+100

@@ -1,32 +1,17 @@
 ;;;;;;;;;;;;;;;;;;;;
 
-(load "tree.lisp")
+(load "forest.lisp")
+(defvar forest-model (build-forest '() NTrees NSamples THPrec))
+(format t "Precision: ~S~%" 
+    (use-tree-forest-full-rfs forest-model
+    )
+)
+(let
+    (
+        (file (open "forest-model.lisp" :direction :output :if-exists :rename-and-delete :if-does-not-exist :create))
+    )
+    (print forest-model file)
+)
 
 
-
-;(defvar tree (build-tree-full))
-;(format t "~S~%" (use-tree-full tree))
-
-;(defvar tree (build-tree-full-rfs))
-;(format t "~S~%" tree)
-
-;(defvar tree (build-tree-rfs 400))
-
-
-;(format t "Building tree... ~%" )
-;(defvar tree (build-tree-limt-rfs 100))
-;(defvar tree (build-tree-limt 2))
-
-;(format t "Testing tree... ~%" )
-
-;(format t "~S~%" tree)
-;(read)
-
-;(format t "~S~%" (use-tree-full-rfs tree))
-
-
-(defvar forest (build-forest '() 20 1000 0.6))
-;(format t "~S~%" forest)
-(format t "~S~%" (use-tree-forest-full-rfs forest))
-(format t "~S~%" (use-tree-full-rfs (car forest)))
 ;EOF
