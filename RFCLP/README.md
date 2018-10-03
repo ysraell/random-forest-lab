@@ -1,17 +1,20 @@
 ### How to use?
 
-Model parameters in 'model-parm.lisp'.
-"dataset.training.csv"
-"dataset.test.csv"
+- Model parameters in 'model-parm.lisp'.
 
-Run te entaire code: train and test steps. After, save the model (like run 'make model').
-$ make
+- Use the file's name  like that: "dataset.training.csv" and "dataset.test.csv".
 
-Create a file with the forest model:
-$ make model
+- Run te entaire code: train and test steps. After, save the model (like run 'make model').
 
-Format data from CSV:
-$ make format-data
+`$ make`
+
+- Create a file with the forest model:
+
+`$ make model`
+
+- Format data from CSV:
+
+`$ make data`
 
 - It's important to set wich features are numeric in 'set-numeric.lisp'.
 
