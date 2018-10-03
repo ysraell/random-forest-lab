@@ -15,8 +15,10 @@
 (defvar *NSamples* 100)
 ; To prune the worst trees with low rating accuracy.
 ; Prune below THPrec.
-(defvar *THPrec* 0.5)
+(defvar *THPrec* 0.6)
 
+; Test rounds 
+(defvar *TRounds* 50)
 ; Load the datasets to memory
 (defvar *TSamples_train* 30000)
 (defvar *TSamples_test* 10000)

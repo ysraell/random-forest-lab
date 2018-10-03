@@ -331,6 +331,8 @@
     )
 )
 
+;;;;;;;;;;;;;;;;; test functions ;;;;;;;;;;;;;
+
 (defun use-tree-forest-full-rfs (forest Ts)
     (let
         (
@@ -355,6 +357,18 @@
             (incf n 1)
         )
         (float (/ i n))
+    )
+)
+
+(defun use-tree-forest-rfs-rounds (forest Ts R)
+    (let
+        (
+            (results '())
+        )
+        (dotimes (n R)
+            (setf results (cons (use-tree-forest-full-rfs forest Ts) results))
+        )
+        results
     )
 )
 
