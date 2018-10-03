@@ -4,6 +4,8 @@
 (defvar *num-fetures* '(1 3 5 11 12 13))
 ; Total features *(not yet implemented)
 (defvar *total-fetures* '14)
+(defvar *min-fetures-sample* '2)
+(defvar *max-fetures-sample* '5)
 ; Targets? 
 (defvar *targets* '("<=50K" ">50K"))
 
@@ -15,7 +17,7 @@
 (defvar *NSamples* 100)
 ; To prune the worst trees with low rating accuracy.
 ; Prune below THPrec.
-(defvar *THPrec* 0.6)
+(defvar *THPrec* 0.0)
 
 ; Test rounds 
 (defvar *TRounds* 20)

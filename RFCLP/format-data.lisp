@@ -10,7 +10,28 @@
 (format t "Formating data: CSV to Lists... ~%")
 
 ; CONVERT VAR num-fetures IN THIS:
-(defvar *num-index* '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0))
+
+;(defvar *num-fetures* '(1 3 5 11 12 13))
+; '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0)
+(defun gen-num-index (ni n nf tf)
+    (cond
+        (
+            (equal n (+ tf 1))
+            ni
+        )
+        (
+            (equal (car nf) n)
+            (gen-num-index (cons '1 ni) (+ n 1) (cdr nf) tf)
+        )
+        (
+            t
+            (gen-num-index (cons '0 ni) (+ n 1) nf tf)
+        )
+    )
+)
+
+(defvar *num-index* (reverse (gen-num-index '() '1 *num-fetures* *total-fetures*)))
+;(format t "~S~%" *num-index*)
 
 (defun convert-data (row num)
     (cond

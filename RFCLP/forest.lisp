@@ -68,8 +68,8 @@
 
 ;;;;;;;;;;;;;;; Sample processing ;;;;;;;;;;;;;;;;;
 
-(defun rfs-gen-config (SS mSS)
-    (lotto-select (+ mSS (random (+ (- SS mSS) 1))) SS)
+(defun rfs-gen-config (SS mSS MAXS)
+    (lotto-select (+ mSS (random MAXS)) SS)
 )
 
 (defun rfs-set-config (new-sample rfs-config sample)
@@ -197,7 +197,7 @@
         (
             (tree '())
             (sample '())
-            (rfs-config (rfs-gen-config *total-fetures* 2))
+            (rfs-config (rfs-gen-config *total-fetures* *min-fetures-sample* *max-fetures-sample*))
         )
         (do
             (
@@ -300,6 +300,7 @@
             )
             (
                 (< valor min-prec)
+                ;(format t "~S: ~S ~%" (car tree) valor)
                 (build-forest forest num-trees nsamples min-prec)
             )
             (
@@ -364,11 +365,14 @@
     (let
         (
             (results '())
+            (soma 0)
         )
         (dotimes (n R)
             (setf results (cons (use-tree-forest-full-rfs forest Ts) results))
+            (setf soma (+ soma (car results)))
+            (format t "Round ~S: ~S~%" n (car results))
         )
-        results
+        (cons (/ soma R) results)
     )
 )
 
