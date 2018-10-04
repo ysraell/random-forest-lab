@@ -17,7 +17,7 @@
 (defvar *NSamples* 100)
 ; To prune the worst trees with low rating accuracy.
 ; Prune below THPrec.
-(defvar *THPrec* 0.96)
+(defvar *THPrec* 0.99)
 
 ; Test rounds 
 (defvar *TRounds* 20)

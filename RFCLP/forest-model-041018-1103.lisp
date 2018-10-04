@@ -283,3 +283,39 @@
 
 (0.9987 0.9985 0.9991 0.9989 0.9985 0.9991 0.9993 0.9989 0.9984 0.9988 0.999
  0.9981 0.9984 0.9988 0.9987 0.9987 0.9977 0.9986 0.9988 0.9989 0.9988) )) 
+;;;;;;;;;;;;;
+
+; Wich features are numeric? 0: not, 1: yes. *(not yet implemented)
+(defvar *num-fetures* '(1 3 5 11 12 13))
+; Total features *(not yet implemented)
+(defvar *total-fetures* '14)
+(defvar *min-fetures-sample* '2)
+(defvar *max-fetures-sample* '5)
+; Targets? 
+(defvar *targets* '("<=50K" ">50K"))
+
+; Model parameters.
+
+; Number os trees in the forest:
+(defvar *NTrees* 20)
+; How much samples will be used to build the trees?
+(defvar *NSamples* 100)
+; To prune the worst trees with low rating accuracy.
+; Prune below THPrec.
+(defvar *THPrec* 0.99)
+
+; Test rounds 
+(defvar *TRounds* 20)
+; Load the datasets to memory
+(defvar *TSamples_train* 30000)
+(defvar *TSamples_test* 10000)
+
+; 16280 dataset.test.csv
+; 32561 dataset.training.csv
+; 48841 total
+; Without samples with missing data:
+; 15059 dataset.test.csv
+; 30162 dataset.training.csv
+; 45221 total
+
+;EOF

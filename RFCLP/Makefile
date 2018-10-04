@@ -1,6 +1,6 @@
 ################
 
-all: main
+all: main model
 
 data: format-data
 	rm data_temp
