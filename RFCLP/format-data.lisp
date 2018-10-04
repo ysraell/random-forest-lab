@@ -114,6 +114,46 @@
 )
 
 (defun convert-nun-cat (tmp tmp2 med num)
+    (let
+        (
+            (medias (car med))
+        )
+        (cond
+            (
+                (null num)
+                (reverse tmp2)
+            ) 
+            (
+                (zerop (car num))
+                (convert-nun-cat (cdr tmp) (cons (car tmp) tmp2) (cdr med) (cdr num))
+            )
+            (
+                (equal (car num) '1)
+                (cond
+                    (
+                        (< (car tmp) (car medias)) 
+                        (setf tmp2 (cons "A" tmp2))
+                    )
+                    (
+                        (< (car tmp) (car (cdr medias)))
+                        (setf tmp2 (cons "B" tmp2))
+                    )
+                    (
+                        (< (car tmp) (car (cdr (cdr medias))))
+                        (setf tmp2 (cons "C" tmp2))
+                    )
+                    (
+                        t
+                        (setf tmp2 (cons "D" tmp2))
+                    )
+                )
+                (convert-nun-cat (cdr tmp) tmp2 (cdr med) (cdr num))
+            )
+        )
+    )
+)
+
+(defun convert-nun-cat-old (tmp tmp2 med num)
     (cond
         (
             (null num)
@@ -133,8 +173,6 @@
         )
     )
 )
-
-
 
 (defun apply-data (data-ori data-des med)
     (let
@@ -173,6 +211,8 @@
 (num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp2" "dataset.test")
 (format t "Well done!~%")
 (format t "Cleaning temp data...~%")
+
+;(format t "~S~%" (gen-medians '() *num-index* 0 "data_temp"))
 
 
 ;EOF

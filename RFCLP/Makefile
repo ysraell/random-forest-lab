@@ -7,8 +7,10 @@ data: format-data
 	rm data_temp2
 
 model:
-	echo 'Forest model to file '
-	sbcl --script gen-model.lisp >forest-model.lisp
+	echo 'Forest model to file with date.'
+	cp forest-model.lisp tempasd
+	cat model-parm.lisp >>tempasd
+	mv tempasd forest-model-`date "+%d%m%y-%H%M"`.lisp
 
 test: test-model
 
