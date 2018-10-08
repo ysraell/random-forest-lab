@@ -17,6 +17,4 @@
 `$ make data`
 
 - It's important to set wich features are numeric in 'set-numeric.lisp'.
-
-
-
+ 

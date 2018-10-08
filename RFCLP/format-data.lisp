@@ -30,8 +30,8 @@
     )
 )
 
-(defvar *num-index* (reverse (gen-num-index '() '1 *num-fetures* *total-fetures*)))
-;(format t "~S~%" *num-index*)
+(defvar *num-index* (reverse (gen-num-index '() '1 *num-fetures* (+ *total-fetures* '1))))
+(format t "~S~%" *num-index*)
 
 (defun convert-data (row num)
     (cond

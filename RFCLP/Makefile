@@ -1,6 +1,8 @@
 ################
 
-all: main model
+all: data main model
+
+m: main model
 
 data: format-data
 	rm data_temp
@@ -24,5 +26,19 @@ missing:
 	grep -ve '\?' dataset.test.csv.tmp >dataset.test.csv
 	cp dataset.training.csv dataset.training.csv.tmp
 	grep -ve '\?' dataset.training.csv.tmp >dataset.training.csv
+
+adult:
+	echo "Set dataset Adult."
+	cat dataset.test.csv.adult>dataset.test.csv
+	cat dataset.training.csv.adult>dataset.training.csv
+	cat model-parm.lisp.adult>model-parm.lisp
+
+titanic:
+	echo "Set dataset Titanic."
+	cat dataset.test.csv.titanic>dataset.test.csv
+	cat dataset.training.csv.titanic>dataset.training.csv
+	cat model-parm.lisp.titanic>model-parm.lisp
+
+
 
 #EOF
