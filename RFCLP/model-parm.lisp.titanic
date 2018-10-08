@@ -1,4 +1,7 @@
 ;;;;;;;;;;;;;
+; Dataset name:
+(defvar *dataset-name* "; Titanic survived dataset.")
+
 
 ; Wich features are numeric? 0: not, 1: yes. *(not yet implemented)
 (defvar *num-fetures* '(3 6))
