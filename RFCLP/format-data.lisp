@@ -1,17 +1,24 @@
 ;;;;;;;;;;;;;;;;;;;
 
 
-
+; Load the median function:
 (load "median.lisp")
+
+; Load the parameters for the dataset
 (load "model-parm.lisp")
+
+; To use cl-csv library
 (load "/root/quicklisp/setup.lisp")
+; Load cl-csv library
 (ql:quickload "cl-csv")
+
+
 (format t "~%")
 (format t "Formating data: CSV to Lists... ~%")
 
-; CONVERT VAR num-fetures IN THIS:
-
-;(defvar *num-fetures* '(1 3 5 11 12 13))
+; CONVERT VAR:
+; *num-fetures* '(1 3 5 11 12 13)
+; IN THIS:
 ; '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0)
 (defun gen-num-index (ni n nf tf)
     (cond
@@ -30,9 +37,11 @@
     )
 )
 
+; Define the position os numeric features
 (defvar *num-index* (reverse (gen-num-index '() '1 *num-fetures* (+ *total-fetures* '1))))
-(format t "~S~%" *num-index*)
 
+
+; Fcuntion to convert the data to integer.
 (defun convert-data (row num)
     (cond
         (
@@ -51,6 +60,10 @@
     )
 )
 
+; Load and convert from CSV to list data
+; (with numeric features in integer format)
+
+; Training data.
 (with-open-file (stream "data_temp"
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
     (cl-csv:do-csv (row #P"dataset.training.csv")
@@ -59,6 +72,7 @@
     )
 )
 
+; Testing data
 (with-open-file (stream "data_temp2"
 :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
     (cl-csv:do-csv (row #P"dataset.test.csv")
@@ -69,6 +83,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; Generete the list of values from a given feature.
 (defun build-velues (out file pos)
     (let
         ((tmp (read file nil :EOF)))
@@ -85,7 +100,7 @@
     )
 )
 
-
+; Get the vaues for a given feature.
 (defun get-values2 (pos filename)
     (with-open-file (file filename :direction :input)
         (let ((out '()))
@@ -95,7 +110,7 @@
     )
 )
 
-;(median (get-values2 pos))
+;Generate the features medians.
 (defun gen-medians (med num pos filename)
     (cond
         (
@@ -113,6 +128,7 @@
     )
 )
 
+; Convert the quarter medians in 4 letters (A, B, C and D).
 (defun convert-nun-cat (tmp tmp2 med num)
     (let
         (
@@ -153,27 +169,7 @@
     )
 )
 
-(defun convert-nun-cat-old (tmp tmp2 med num)
-    (cond
-        (
-            (null num)
-            (reverse tmp2)
-        ) 
-        (
-            (zerop (car num))
-            (convert-nun-cat (cdr tmp) (cons (car tmp) tmp2) (cdr med) (cdr num))
-        )
-        (
-            (equal (car num) '1)
-            (if (< (car tmp) (car med))
-                (setf tmp2 (cons "A" tmp2))
-                (setf tmp2 (cons "B" tmp2))
-            )
-            (convert-nun-cat (cdr tmp) tmp2 (cdr med) (cdr num))
-        )
-    )
-)
-
+; Recursive function to use in function 'num-to-cat'.
 (defun apply-data (data-ori data-des med)
     (let
         (
@@ -187,13 +183,13 @@
             (
                 t
                 (print (convert-nun-cat tmp '() med *num-index*) data-des)
-                ;(format t "~S~%"  (convert-nun-cat tmp '() med num-index))
                 (apply-data data-ori data-des med)
             )
         )
     )    
 )
 
+; Convert numeric features in categorical using the quarters medians.
 (defun num-to-cat (med filename filename_cat)
     (with-open-file (data-des filename_cat 
         :direction :output :if-exists :rename-and-delete :if-does-not-exist :create)
@@ -207,8 +203,11 @@
     )
 )
 
+; Format the trainning and testing datasets.
 (num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp" "dataset.training")
 (num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp2" "dataset.test")
+
+
 (format t "Well done!~%")
 (format t "Cleaning temp data...~%")
 

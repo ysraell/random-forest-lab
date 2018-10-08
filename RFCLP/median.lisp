@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;
+; This function calculates the quarter medians. 
+; There is a dealing with small quantities of unique values.
 
 (defun median (sample)
     (let*

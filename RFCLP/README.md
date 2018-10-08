@@ -1,10 +1,10 @@
 ### How to use?
 
-- Model parameters in 'model-parm.lisp'.
+- Model and dataset parameters in `model-parm.lisp.*datasetname*`. 
 
-- Use the file's name  like that: "dataset.training.csv" and "dataset.test.csv".
+- Use datasets Titanic and Adult like a template to use others. May it's necessary to use a Python/Pandas to format the dataset. See notebook `Format_raw_data.ipynb` for more details .
 
-- Run te entaire code: train and test steps. After, save the model (like run 'make model') in `forest-model.lisp`. Just load, will appears forest-model variable.
+- Run te entaire code: train and test steps. After, save the model (like run `make model`) in `forest-model-+DDMMYY-HHMM.lisp`. Just load, will appears forest-model and others variables.
 
 `$ make`
 
@@ -12,9 +12,38 @@
 
 `$ make model`
 
-- Format data from CSV:
+- Run the testing step agin with the same model:
 
-`$ make data`
+`$ make test`
 
-- It's important to set wich features are numeric in 'set-numeric.lisp'.
+- For more options, see Makefile.
+
+ ### Files
+
+ - `Format_raw_data.ipynb`: Use Python/Pandas to format dataset.
+ 
+ - `Makefile`: Makefile to automate the executions.
+ 
+ - `README.md`: 
+ 
+ - `forest-model-DDMMYY-HHMM.lisp`: A lisp code to load the model, parameters and results.
+ 
+ - `forest-model.lisp`: The last generated.
+
+ - `forest.lisp`: All implemented Random Forest method.
+
+ - `format-data.lisp`: To convert the CSV data in list format (native Common Lisp format).
+
+ - `main.lisp`: Main program.
+
+ - `median.lisp`: Median function.
+
+ - `model-parm.lisp`: Current parameters to load.
+ 
+ - `model-parm.lisp.*DATASET*`: Parameters of *DATASET*.
+
+ - `rand_perm.lisp`: Functions to random fetures and samples selection.
+
+ - `test-model.lisp`: Program to run testing step only.
+
  

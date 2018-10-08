@@ -1,13 +1,17 @@
 ;;;;;;;;;;;;;
-; Dataset name:
+; Parameters file.
+
+; Name for this dataset (or set of parameters).
 (defvar *dataset-name* "; Titanic survived dataset.")
 
 
-; Wich features are numeric? 0: not, 1: yes. *(not yet implemented)
+; Wich features are numeric? 
 (defvar *num-fetures* '(3 6))
-; Total features *(not yet implemented)
+; Total features:
 (defvar *total-fetures* '8)
+; Minimal quantities of features tu use to build the trees:
 (defvar *min-fetures-sample* '2)
+; Maximal quantities of features tu use to build the trees:
 (defvar *max-fetures-sample* '7)
 ; Targets? 
 (defvar *targets* '("1" "0"))

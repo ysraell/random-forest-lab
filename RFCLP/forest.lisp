@@ -1,6 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; Load model parameters
 (load "model-parm.lisp")
+
+; Load function for randomly selection features and samples.
 (load "rand_perm.lisp")
 
 
@@ -68,10 +71,13 @@
 
 ;;;;;;;;;;;;;;; Sample processing ;;;;;;;;;;;;;;;;;
 
+; Generete numbers for selection features randomly
 (defun rfs-gen-config (SS mSS MAXS)
     (lotto-select (+ mSS (random MAXS)) SS)
 )
 
+; Apply the list created above to generate the sample
+; used to grow the tree
 (defun rfs-set-config (new-sample rfs-config sample)
     (setf new-sample (cons (nth (car rfs-config) sample) new-sample))
     (cond
@@ -87,6 +93,7 @@
     )
 )
 
+; Load the samples from dataset.
 (defun load-samples (filename Ts)
  (let
         (
@@ -111,15 +118,18 @@
     )
 )
 
+; Randomly access to values in 'lista'
 (defun random-access (lista)
     (nth (random (length lista)) lista)
 )
 
 ;;;;;;;;;;;;;;;;; Load datasets ;;;;;;;;;;;;;;;;;;;
 
-
+; Testing
 (defvar *filetest* (load-samples "dataset.test" *TSamples_test*))
+; Trainning
 (defvar *filetrain* (load-samples "dataset.training" *TSamples_train*))
+; Pruning
 (defvar *fileprune* (load-samples "dataset.training" *TSamples_train*))
 
 ;;;;;;;;;;;;;;;;;;; Tree part ;;;;;;;;;;;;;;;;;;;;;
@@ -145,7 +155,7 @@
     )
 )
 
-;;; If the tree is new, create a entaire branch with one sample.
+;;; If the tree is new, create a entire branch with one sample.
 
 (defun create-tree-rfs (sample rfs-config)
     (let ((tree (make-node rfs-config)))
@@ -224,6 +234,7 @@
 )
 
 
+; Function to test the tree given sample
 (defun use-tree (tree sample)
     (cond
         (
@@ -258,6 +269,7 @@
 
 ;;; Pruning
 
+; Test function, used to prune.
 (defun use-tree-full-rfs (tree Ts database)
     (let
         (
@@ -296,15 +308,17 @@
         (cond
             (
                 (< num-trees 1)
+                ; End!
                 forest
             )
             (
                 (< valor min-prec)
-                ;(format t "~S: ~S ~%" (car tree) valor)
+                ; Prune!
                 (build-forest forest num-trees nsamples min-prec)
             )
             (
                 t
+                ; Tree aproved.
                 (format t "Remain trees: ~S, rec: ~S~%" num-trees valor)
                 (build-forest (cons tree forest) (- num-trees 1) nsamples min-prec)
             )
@@ -312,6 +326,7 @@
     )
 )
 
+; Function to test forest.
 (defun use-forest (forest row valor)
     (let
         (
@@ -320,12 +335,10 @@
         (cond
             (
                 (null (cdr forest))
-                ;(format t "~S~%" sample)
                 (+ (use-tree (cdr (car forest)) sample) valor)
             )
             (
                 t
-                ;(format t "~S~%" sample)
                 (use-forest (cdr forest) row (+ (use-tree (cdr (car forest)) sample) valor))
             )
         )
@@ -334,6 +347,7 @@
 
 ;;;;;;;;;;;;;;;;; test functions ;;;;;;;;;;;;;
 
+; Complete implementation for testing step.
 (defun use-tree-forest-full-rfs (forest Ts)
     (let
         (
@@ -349,9 +363,7 @@
             (
                 (equal j Ts)
             )
-            ;(format t "~S~%" row)
             (setf valor (use-forest forest row 0))
-            ;(format t "~S~%" valor)
             (if (> valor 0)
                 (incf i 1)
             )
@@ -361,6 +373,7 @@
     )
 )
 
+; Run the R testing rounds
 (defun use-tree-forest-rfs-rounds (forest Ts R)
     (let
         (
