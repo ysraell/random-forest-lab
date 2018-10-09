@@ -21,24 +21,30 @@
 ; IN THIS:
 ; '(1 0 1 0 1 0 0 0 0 0 1 1 1 0 0)
 (defun gen-num-index (ni n nf tf)
-    (cond
-        (
-            (equal n (+ tf 1))
-            ni
-        )
-        (
-            (equal (car nf) n)
-            (gen-num-index (cons '1 ni) (+ n 1) (cdr nf) tf)
-        )
-        (
-            t
-            (gen-num-index (cons '0 ni) (+ n 1) nf tf)
+    (let ((nn (+ n 1)))
+        (cond
+            (
+                (equal n tf)
+                (cons '0 ni)
+            )
+            (
+                nf
+                (gen-num-index (cons '1 ni) nn nf tf)
+            )
+            (
+                (equal (car nf) n)
+                (gen-num-index (cons '1 ni) nn (cdr nf) tf)
+            )
+            (
+                t
+                (gen-num-index (cons '0 ni) nn nf tf)
+            )
         )
     )
 )
 
 ; Define the position os numeric features
-(defvar *num-index* (reverse (gen-num-index '() '1 *num-fetures* (+ *total-fetures* '1))))
+(defvar *num-index* (reverse (gen-num-index '() 1 *num-fetures* (+ *total-fetures* '1))))
 
 
 ; Fcuntion to convert the data to integer.
@@ -46,6 +52,10 @@
     (cond
         (
             (null num)
+            nil
+        )
+        (
+            (null row)
             nil
         ) 
         (
@@ -202,11 +212,13 @@
         )
     )
 )
-
+(format t "Check.")
 ; Format the trainning and testing datasets.
-(num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp" "dataset.training")
-(num-to-cat (gen-medians '() *num-index* 0 "data_temp") "data_temp2" "dataset.test")
-
+(defvar *generated-medians* (gen-medians '() *num-index* 0 "data_temp"))
+(num-to-cat *generated-medians* "data_temp" "dataset.training")
+(num-to-cat *generated-medians* "data_temp2" "dataset.test")
+;(format t "~S~%" *num-index*)
+;(format t "~S~%" *generated-medians*)
 
 (format t "Well done!~%")
 (format t "Cleaning temp data...~%")

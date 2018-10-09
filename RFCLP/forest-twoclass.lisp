@@ -137,20 +137,19 @@
 ;;; Create the branch if the value's feature not exist.
 
 (defun create-branch (tree sample)
+    (add-child tree (make-node (car sample)))
     (cond 
         (
             (null (cdr sample))
-            (dotimes (n (length *targets*))               
-                (add-child tree (make-node (nth n *targets*)))
-                (if (equal (car sample) (nth n *targets*))
-                    (add-child tree (make-node '1))
-                    (add-child tree (make-node '0))
-                )
+            (add-child tree (make-node '1))
+            (if (equal (car sample) (car *targets*))
+                (add-child tree (make-node (car (cdr *targets*))))
+                (add-child tree (make-node (car *targets*)))
             )
+            (add-child tree (make-node '0))
         )
         (
             t
-            (add-child tree (make-node (car sample)))
             (create-branch (first-child tree) (cdr sample))
         )
     )
@@ -243,11 +242,11 @@
             (cond
                 (
                     (equal (car (car tree)) (car sample))
-                    1
+                    (- (caar (cdr tree)) (caar (cdddr tree)))
                 )
                 (
                     t
-                    -1
+                    (- (caar (cdddr tree)) (caar (cdr tree)))
                 )
             )  
         )
@@ -314,7 +313,7 @@
             )
             (
                 (< valor min-prec)
-                ;(format t "Pruned!! " #\return); Prune!
+                ; Prune!
                 (build-forest forest num-trees nsamples min-prec)
             )
             (

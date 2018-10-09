@@ -57,6 +57,11 @@ titanic:
 	cat dataset.training.csv.titanic>dataset.training.csv
 	cat model-parm.lisp.titanic>model-parm.lisp
 
-
+# Dataset 2
+mnist:
+	echo "Set dataset MNIST."
+	cat dataset.test.csv.mnist>dataset.test.csv
+	cat dataset.training.csv.mnist>dataset.training.csv
+	cat model-parm.lisp.mnist>model-parm.lisp
 
 #EOF

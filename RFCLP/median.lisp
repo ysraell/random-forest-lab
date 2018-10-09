@@ -32,11 +32,11 @@
             )
             (
                 (> len2 2)
-                (list (car num2) (car (cdr num2)) (last num2))
+                (list (car num2) (car (cdr num2)) (car (last num2)))
             )
             (
                 t
-                (list (car num2) (last num2) (last num2))                
+                (list (car num2) (car (last num2)) (car (last num2)))                
             )
         )
     )
