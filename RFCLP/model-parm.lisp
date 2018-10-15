@@ -12,27 +12,29 @@
 ; Total features:
 (defvar *total-fetures* '782) 
 ; Minimal quantities of features tu use to build the trees:
-(defvar *min-fetures-sample* 10)
+(defvar *min-fetures-sample* 2)
 ; Maximal quantities of features tu use to build the trees:
-(defvar *max-fetures-sample* 20)
+(defvar *max-fetures-sample* 150)
 ; Targets? 
 (defvar *targets* '("0" "1" "2" "3" "4" "5" "6" "7" "8" "9"))
 
 ; Model parameters.
 
 ; Number os trees in the forest:
-(defvar *NTrees* 5)
+(defvar *NTrees* 210)
 ; How much samples will be used to build the trees?
-(defvar *NSamples* 10)
+(defvar *NSamples* 3000)
 ; To prune the worst trees with low rating accuracy.
 ; Prune below THPrec.
-(defvar *THPrec* 0.2)
+(defvar *THPrec* 0.99)
+; N prunes limit to decrease THPrec
+(defvar *n_prune_limit* 1000)
 
 ; Test rounds 
-(defvar *TRounds* 2)
+(defvar *TRounds* 20)
 ; Load the datasets to memory
-(defvar *TSamples_train* 30000)
-(defvar *TSamples_test* 10000)
+(defvar *TSamples_train* 1000)
+(defvar *TSamples_test* 1000)
 
 ; 16280 dataset.test.csv
 ; 32561 dataset.training.csv

@@ -74,20 +74,25 @@
 ; (with numeric features in integer format)
 
 ; Training data.
-(with-open-file (stream "data_temp"
-:direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
-    (cl-csv:do-csv (row #P"dataset.training.csv")
-        (convert-data row *num-index*)
-        (print row stream)
+(let ((n 0))
+    (with-open-file (stream "data_temp"
+    :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
+        (cl-csv:do-csv (row #P"dataset.training.csv")
+            (convert-data row *num-index*)
+            (incf n 1)
+            (format t "Formating data train: ~S~%" n)
+            (print row stream)
+        )
     )
-)
-
-; Testing data
-(with-open-file (stream "data_temp2"
-:direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
-    (cl-csv:do-csv (row #P"dataset.test.csv")
-        (convert-data row *num-index*)
-        (print row stream)
+    ; Testing data
+    (with-open-file (stream "data_temp2"
+    :direction :output :if-exists :rename-and-delete :if-does-not-exist :create )
+        (cl-csv:do-csv (row #P"dataset.test.csv")
+            (convert-data row *num-index*)
+            (incf n 1)
+            (format t "Formating data test: ~S~%" n)
+            (print row stream)
+        )
     )
 )
 
@@ -122,6 +127,7 @@
 
 ;Generate the features medians.
 (defun gen-medians (med num pos filename)
+    (format t "Gen-medians: ~S~%" (random 2))
     (cond
         (
             (null num)
@@ -206,8 +212,11 @@
         (let
             (
                 (data-ori (open filename :direction :input))
+                (n 0)
                 
             )
+            (incf n 1)
+            (format t "NunToCat: ~S~%" n)
             (apply-data data-ori data-des med)
         )
     )

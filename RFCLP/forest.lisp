@@ -172,15 +172,14 @@
     (cond
         (
             (null (cdr sample))
-            (cond
-                (
-                    (equal (car (car tree)) (car sample))
-                    (setf (caar (cdr tree)) (+ (caar (cdr tree)) 1))
+            (dotimes (n (length *targets*))               
+                (cond
+                    (
+                        (equal (car (car tree)) (car sample))
+                        (setf (caar (cdr tree)) (+ (caar (cdr tree)) 1))
+                    )
                 )
-                (
-                    t
-                    (setf (caar (cdddr tree)) (+ (caar (cdddr tree)) 1))
-                )
+                (setf tree (cddr tree))
             )
         ) 
         (
@@ -234,22 +233,12 @@
     )
 )
 
-
 ; Function to test the tree given sample
 (defun use-tree (tree sample)
     (cond
         (
             (null (cdr sample))
-            (cond
-                (
-                    (equal (car (car tree)) (car sample))
-                    1
-                )
-                (
-                    t
-                    -1
-                )
-            )  
+            tree
         )
         (
             (equal (data tree) (car sample))
@@ -261,12 +250,53 @@
         )
         (
             t
-            '0
+            (use-tree (first-child tree) (cdr sample))
         )
     )
 )
 
 ;;;;;;;;;;;;;;;;;;; Forest part ;;;;;;;;;;;;;;;;;;;
+
+; Return if most likelihood class match with target sample
+
+(defun major-class (rank mjclass mjnum)
+    (let
+        (
+            (class1 (caar rank))
+            (num1 (caar (cdr rank)))
+        )
+        ;(format t "~S : ~S ~%" mjclass mjnum)
+        ;(format t "~S : ~S ~%" class1 num1)
+        (cond
+             (
+                (> num1 mjnum)
+                (setf mjclass class1)
+                (setf mjnum num1)
+            )
+        )
+        ;(format t "~S~%" mjclass)
+        (cond
+            (
+                (null (cdddr rank))
+                mjclass
+            )
+            (
+                t
+                (major-class (cddr rank) mjclass mjnum)
+            )
+        )
+    )
+)
+
+(defun match-class (rank sample)
+    ;(format t "~S : ~S ~%"
+    ;    (major-class rank "nothing" 0) (car (last sample))
+    ;)
+    (if (equal (major-class rank "nothing" 0) (car (last sample)))
+        1
+        0
+    )
+)
 
 ;;; Pruning
 
@@ -288,10 +318,7 @@
                 (equal j Ts)
             )
             (setf sample (rfs-set-config (last row) (car tree) (cons 'ROOT row)))
-            (setf valor (use-tree (cdr tree) sample))
-            (if (> valor 0)
-                (incf i 1)
-            )
+            (incf i (match-class (use-tree (cdr tree) sample) sample))
             (incf n 1)
         )
         (float (/ i n))
@@ -300,10 +327,11 @@
 
 ;;; Build the forest
 
-(defun build-forest (forest num-trees nsamples min-prec)
+(defun build-forest (forest num-trees nsamples min-prec prunes)
     (let*
         (
             (tree (build-tree-limt-rfs nsamples))
+            (hm-features (length (car tree)))
             (valor (use-tree-full-rfs tree nsamples *fileprune*))
         )
         (cond
@@ -314,21 +342,29 @@
             )
             (
                 (< valor min-prec)
+                (incf prunes 1)
                 ;(format t "Pruned!! " #\return); Prune!
-                (build-forest forest num-trees nsamples min-prec)
+                (cond
+                    (
+                        (> prunes *n_prune_limit*)
+                        (setf min-prec (- min-prec *decrease_step_prune*))
+                        (format t "Prune th lowed: ~S~%" min-prec); Prune!
+                    )
+                )
+                (build-forest forest num-trees nsamples min-prec prunes)
             )
             (
                 t
                 ; Tree aproved.
-                (format t "Remain trees: ~S, rec: ~S~%" num-trees valor)
-                (build-forest (cons tree forest) (- num-trees 1) nsamples min-prec)
+                (format t "Remain trees: ~S, rec: ~S, hm-f: ~S, prunes: ~S ~%" num-trees valor hm-features prunes)
+                (build-forest (cons tree forest) (- num-trees 1) nsamples min-prec 0)
             )
         )
     )
 )
 
 ; Function to test forest.
-(defun use-forest (forest row valor)
+(defun use-forest-old (forest row valor)
     (let
         (
             (sample (rfs-set-config (last row) (car (car forest)) (cons 'ROOT row)))
@@ -346,6 +382,59 @@
     )
 )
 
+(defun update-rank (rank leaf tempout) 
+    (cond
+        (
+            (null rank)
+            ;(format t "Leaf~%")
+            leaf
+        )
+        (
+            (null (cddr rank))
+            ;(format t "Out~%")
+            ;(format t "~S~%" tempout)
+            ;(format t "~S~%" (car rank))
+            ;(format t "~S~%" (list (+ (caar (cdr rank)) (caar (cdr leaf)))))
+            (setf tempout (cons (car rank) tempout))
+            (setf tempout (cons (list (+ (caar (cdr rank)) (caar (cdr leaf)))) tempout))
+            ;(format t "Out: ~S~%" (reverse tempout))
+            (reverse tempout)
+        )
+        (
+            t
+            ;(format t "T~%")
+            ;(format t "~S~%" (car rank))
+            ;(format t "~S~%" (list (+ (caar (cdr rank)) (caar (cdr leaf)))))
+            (setf tempout (cons (car rank) tempout))
+            (setf tempout (cons (list (+ (caar (cdr rank)) (caar (cdr leaf)))) tempout))
+            (update-rank (cddr rank) (cddr leaf) tempout)
+        )
+    )
+)
+
+; Function to test forest.
+(defun use-forest (forest row rank)
+    ;(format t "~S~%" rank)
+    (let
+        (
+            (sample (rfs-set-config (last row) (car (car forest)) (cons 'ROOT row)))
+        )
+        (cond
+            (
+                (null (cdr forest))
+                (match-class (update-rank rank (use-tree (cdr (car forest)) sample) '()) sample)
+            )
+            (
+                t
+                (use-forest 
+                    (cdr forest)
+                    row
+                    (update-rank rank (use-tree (cdr (car forest)) sample) '())
+                )
+            )
+        )
+    )
+)
 ;;;;;;;;;;;;;;;;; test functions ;;;;;;;;;;;;;
 
 ; Complete implementation for testing step.
@@ -364,7 +453,7 @@
             (
                 (equal j Ts)
             )
-            (setf valor (use-forest forest row 0))
+            (setf valor (use-forest forest row '()))
             (if (> valor 0)
                 (incf i 1)
             )

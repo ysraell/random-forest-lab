@@ -22,9 +22,9 @@ data: format-data
 # Save the model, parameters and results.
 model:
 	echo 'Forest model to file with date.'
-	cp forest-model.lisp tempasd
-	cat model-parm.lisp >>tempasd
-	mv tempasd forest-model-`date "+%d%m%y-%H%M"`.lisp
+	cat model-parm.lisp >>forest-model.lisp
+	bzip2 forest-model.lisp
+	mv forest-model.lisp.bz2 models/forest-model-`date "+%d%m%y-%H%M"`.lisp.bz2
 
 # Testing step again, using the same model.
 test: test-model
@@ -63,5 +63,15 @@ mnist:
 	cat dataset.test.csv.mnist>dataset.test.csv
 	cat dataset.training.csv.mnist>dataset.training.csv
 	cat model-parm.lisp.mnist>model-parm.lisp
+
+mnist_csv_bzip2:
+	echo "Set dataset MNIST."
+	cat test.csv.mnist.bz2 |bzip2 -d >test.csv.mnist
+	cat train.csv.mnist.bz2 |bzip2 -d >train.csv.mnist
+	cat model-parm.lisp.mnist>model-parm.lisp
+
+mn_csv: mnist_csv_bzip2 data
+	echo "Removing MNIST large data."
+	rm train.csv.mnist test.csv.mnist
 
 #EOF

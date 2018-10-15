@@ -4,7 +4,9 @@
 (load "forest.lisp")
 
 ; Build the forest model.
-(defvar *forest-model* (build-forest '() *NTrees* *NSamples* *THPrec*))
+(defvar *forest-model* (build-forest '() *NTrees* *NSamples* *THPrec* 0))
+(format t "Trainning step done.~%")
+(format t "Testing step started.~%")
 
 ; Testing step.
 (defvar *results* (use-tree-forest-rfs-rounds *forest-model* *TSamples_test* *TRounds*))
