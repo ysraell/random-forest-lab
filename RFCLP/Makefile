@@ -64,12 +64,14 @@ mnist:
 	cat dataset.training.csv.mnist>dataset.training.csv
 	cat model-parm.lisp.mnist>model-parm.lisp
 
+# Special call for bunzip2 the MNIST CSV original dataset.
 mnist_csv_bzip2:
 	echo "Set dataset MNIST."
 	cat test.csv.mnist.bz2 |bzip2 -d >test.csv.mnist
 	cat train.csv.mnist.bz2 |bzip2 -d >train.csv.mnist
 	cat model-parm.lisp.mnist>model-parm.lisp
 
+# To put in the correct order the us of MNIST from orignal CSV.
 mn_csv: mnist_csv_bzip2 data
 	echo "Removing MNIST large data."
 	rm train.csv.mnist test.csv.mnist

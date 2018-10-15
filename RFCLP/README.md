@@ -2,9 +2,9 @@
 
 - Model and dataset parameters in `model-parm.lisp.*datasetname*`. 
 
-- Use datasets Titanic and Adult like a template to use others. May it's necessary to use a Python/Pandas to format the dataset. See notebook `Format_raw_data.ipynb` for more details .
+- Use datasets Titanic and Adult like a template to use others. May it's necessary to use a Python/Pandas to format the dataset. See notebook `Format_raw_data_*.ipynb` for more details .
 
-- Run te entaire code: train and test steps. After, save the model (like run `make model`) in `forest-model-+DDMMYY-HHMM.lisp`. Just load, will appears forest-model and others variables.
+- Run te entaire code: train and test steps. After, save the model (like run `make model`) in `forest-model-+DDMMYY-HHMM.lisp.bz2`. Just load, will appears forest-model and others variables.
 
 `$ make`
 
@@ -20,17 +20,15 @@
 
  ### Files
 
- - `Format_raw_data.ipynb`: Use Python/Pandas to format dataset.
+ - `Format_raw_data_*.ipynb`: Use Python/Pandas to format dataset.
  
  - `Makefile`: Makefile to automate the executions.
- 
- - `README.md`: 
  
  - `forest-model-DDMMYY-HHMM.lisp`: A lisp code to load the model, parameters and results.
  
  - `forest-model.lisp`: The last generated.
 
- - `forest.lisp`: All implemented Random Forest method.
+ - `forest.lisp`: Implemented Random Forest method.
 
  - `format-data.lisp`: To convert the CSV data in list format (native Common Lisp format).
 

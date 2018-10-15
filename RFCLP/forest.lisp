@@ -1,3 +1,10 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; All functions to imeplement the
+; Random Forest method, with
+; Random select features (which and how many)
+; Pruning with dynamic threshold.
+; Random select samples for batch,
+; one batch with replacement for each tree. 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Load model parameters
@@ -363,25 +370,9 @@
     )
 )
 
-; Function to test forest.
-(defun use-forest-old (forest row valor)
-    (let
-        (
-            (sample (rfs-set-config (last row) (car (car forest)) (cons 'ROOT row)))
-        )
-        (cond
-            (
-                (null (cdr forest))
-                (+ (use-tree (cdr (car forest)) sample) valor)
-            )
-            (
-                t
-                (use-forest (cdr forest) row (+ (use-tree (cdr (car forest)) sample) valor))
-            )
-        )
-    )
-)
 
+; Dunction to sum the points of the classes
+; given the leaves of each tree used.
 (defun update-rank (rank leaf tempout) 
     (cond
         (
