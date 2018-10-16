@@ -15,7 +15,13 @@ A good reference for this dataset: https://github.com/PAIR-code/facets (see Face
 Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
 
  - **DTCPY**: Decision tree classifier write from scratch in Python 3 using Jupyter Notebook.
+
  - **RFCPY**: Random forest classifier write from scratch in Python 3 using Jupyter Notebook.
+
+ - **RFRPY**: Random forest regressor with SciKit-Learn and write from scratch in Python 3 using Jupyter Notebook. Based on Random Forest in Python
+A Practical End-to-End Machine Learning Example (William Koehrsen).
+*Link:*: https://towardsdatascience.com/random-forest-in-python-24d0893d51c0
+
  - **RFCLP**: Random forest classifier write from scratch in Lisp.
 
 _license_: BSD 3-Clause License. _Copyright_ (c) 2018, Israel Gonçalves de Oliveira. _All rights_ reserved.
