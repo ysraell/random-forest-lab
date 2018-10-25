@@ -89,6 +89,19 @@
     (mapcar #'(lambda (a) (/ a y)) x)
 )
 
+(defun std-func (x)
+    (let*
+        (
+            (sum (reduce #'+ x))
+            (n (length x))
+            (mean (/ sum n))
+            (temp (mapcar #'(lambda (a) (expt (- a mean) 2)) x))
+            (sum2 (reduce #'+ temp))
+        )
+        (sqrt (/ sum2 (- n 1)))
+    )
+)
+
 ; Initialize count with '1
 (defun calc-avarages (sample batch SB count)
     (cond
@@ -468,7 +481,7 @@
             (
                 (equal (car (data (first-child tree))) 't)
                 ;
-                (format t "~S~%" (car (data (first-child tree))))
+                ;(format t "~S~%" (car (data (first-child tree))))
             )
             (
                 t
@@ -483,21 +496,155 @@
     )
 )
 
-;(format t "~S~%" (gen-min-batch *test-data* *Size-Batch* *Ntest*))
-;(format t "~S~%" (lotto-select 5 *Ntest*))
-;(format t "~S~%" (best-split (gen-min-batch *test-data* *Size-Batch* *Ntest*)))
-;(format t "~S~%"
-;                (calc-avarages
-;                    (make-list *NF* :initial-element '0)
-;                    (gen-min-batch *test-data* *Size-Batch* *Ntest*)
-;                    *Size-Batch*
-;                    '0
-;                )
-;)
-(let 
-    ((tree (make-node 'ROOT)))
-    (build-tree tree (gen-min-batch *test-data* *Size-Batch* *Ntest*))
-    (format t "~S~%" tree)
+(defun use-tree (tree sample)
+    (let*
+        (
+            (node (data tree))
+            (pass (car node))
+            (v-t (nth 1 node))
+            (nf-pr (nth 2 node))
+        )
+        ;(format t "~S~%" node)
+        ;(format t "~S~%" (data ))
+        ;(format t "~S~%" (data (first-child (next-sibling (next-sibling tree)))))
+        (cond 
+            (
+                (equal pass 't)
+                (list v-t nf-pr)
+            )
+            (
+                t
+                (cond
+                    (
+                        (> (nth nf-pr sample) v-t)
+                        (use-tree (first-child (next-sibling (next-sibling tree))) sample)
+                    )
+                    (
+                        t
+                        (use-tree (first-child (next-sibling tree)) sample)
+                    )
+                )
+            )
+        )
+    )
 )
+
+(defun build-forest (forest num-trees nsamples)
+    (let*
+        (
+            (tree (make-node 'ROOT))
+            (batch (gen-min-batch *train-data* nsamples *Ntrain*))
+        )
+        (build-tree tree batch)
+        (cond
+            (
+                (equal num-trees '1)
+                (cons tree forest)
+            )
+            (
+                t
+                (build-forest (cons tree forest) (- num-trees 1) nsamples)
+            )
+        )
+    )
+)
+
+(defun use-forest (forest sample)
+    (let*
+        (
+            (ntree (length forest))
+            (s-pred '0)
+            (s-peso '0)
+            (temp '())
+        )
+        (dotimes (n ntree)
+            (setf temp (use-tree (cdr (car (nth n forest))) sample))
+            (incf s-pred (car temp))
+            (incf s-peso (car (cdr temp)))
+        )
+        (/ s-pred s-peso)
+    )
+)
+
+
+(defun make-results (ntree frac)
+    (let*
+        (
+            (sb (round (* frac *Ntrain*)))
+            (forest (build-forest '() ntree sb))
+            (nsamples (length *test-data*))
+            (prediction '())
+            (sample '())
+            (erro '())
+            (soma '0)
+        )
+        (dotimes (n nsamples)
+            (setf sample (nth n *test-data*))
+            (setf prediction (use-forest forest sample))
+            (setf erro (cons (- prediction (car (last sample))) erro))
+            (incf soma (abs (car erro)))
+        )
+        (list (/ soma nsamples) erro)
+    )
+)
+
+
+;(defvar *tree* (make-node 'ROOT))
+;(build-tree *tree* (gen-min-batch *train-data* *Size-Batch* *Ntest*))
+
+#|
+(let*
+    (
+        (ntree (list '100 '500 '1000 '1500 '2000))
+        (N (length ntree))
+    )
+    (dotimes (n N)
+        (let*
+            (
+                (results (make-results (nth n ntree) 0.45))
+            )
+            (format t "######### ~S~%" n)
+            (format t "Em: ~S +-~S ~%~%" (car results) (std-func (car (cdr results))))
+        )
+    )
+)
+|#
+
+(let*
+    (
+        (frac '(0.1 0.2 0.3 0.4 0.5 0.6 0.7))
+        (N (length frac))
+    )
+    (dotimes (n N)
+        (let*
+            (
+                (results (make-results 500 (nth n frac)))
+            )
+            (format t "######### ~S~%" n)
+            (format t "Em: ~S +-~S (~S) ~%~%"
+                (car results)
+                (std-func (car (cdr results)))
+                (nth n frac)
+            )
+        )
+    )
+)
+
+;(format t "~S~%" (std-func '(1.2 0.8 1.2 0.8)))
+
+#|
+(let*
+    (
+        (sample (car *test-data*))
+        (prediction (use-tree (cdr (car *tree*)) sample))
+    )
+    (format t "P:~S, T:~S, diff: ~S, pp: ~S ~%" 
+        (car prediction)
+        (car (last sample))
+        (- (car prediction) (car (last sample)))
+        (cdr prediction)
+    )  
+)
+|#
 
 ;EOF
