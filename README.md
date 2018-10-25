@@ -22,8 +22,12 @@ Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied
 A Practical End-to-End Machine Learning Example (William Koehrsen).
 *Link:*: https://towardsdatascience.com/random-forest-in-python-24d0893d51c0
 
- - **RFCLP**: Random forest classifier write from scratch in Lisp.
+ - **RFCLP**: Random forest classifier write from scratch in Lisp. With pruning step and quantization of numeric features in feature space.
 
+ - **RFRLP**: Random forest regressor write from scratch in Lisp. Using the same algorthm from **RFRPY**.
+
+A Practical End-to-End Machine Learning Example (William Koehrsen).
+*Link:*: https://towardsdatascience.com/random-forest-in-python-24d0893d51c0
 _license_: BSD 3-Clause License. _Copyright_ (c) 2018, Israel Gonçalves de Oliveira. _All rights_ reserved.
 
 
