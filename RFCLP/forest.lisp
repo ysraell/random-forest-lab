@@ -68,9 +68,7 @@
     tree
 )
 
-;;; Takes two nodes created with 'make-node' and adds the
-;;; second node as a child of the first. Returns the first node,
-;;; which will be modified.
+;;; Add a node side.
 (defun add-brother (tree child)
     (nconc tree child)
     tree

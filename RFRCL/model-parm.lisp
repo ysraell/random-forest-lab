@@ -1,3 +1,3 @@
 ;;;;;;;;;;;;
 
-(defvar *Size-Batch* '2)
+(defvar *Size-Batch* '20)
