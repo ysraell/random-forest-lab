@@ -9,15 +9,16 @@
 ; Load dtasets
 (load "test_data.lisp") ; Load *test-data*
 (load "train_data.lisp") ; Load *train-data*
-(defvar *Ntrain* (length *train-data*))
-(defvar *Ntest* (length *test-data*))
-(defvar *NF* (length (car *test-data*)))
+(defvar *Ntrain* (length *train-data*)) ; Total samples
+(defvar *Ntest* (length *test-data*)) ; Total samples
+(defvar *NF* (length (car *test-data*))) ; Number of features
 
 
 ;;;;;;;;;;;;;;; Extract mini batch
 
 ;; Generate the random indices to
 ;; extract the mini batch
+;; (Prevent batch with null samples)
 
 (defun get-samples (dataset out num)    
     (cond
@@ -57,6 +58,8 @@
     )
 )
 
+;; Function to generate the batch.
+
 (defun gen-min-batch (dataset size total)
     (let*
         ((batch (get-samples dataset '() (lotto-select size total))))
@@ -67,7 +70,6 @@
             )
             (
                 t
-                ;(format t "Deu erradoo!!!")
                 (gen-min-batch dataset size total)
             )
         )
@@ -75,19 +77,23 @@
 )
 
 
-; use:
-; sample: (make-list *NF* :initial-element '0)
-; NB: 0
-; with the fallow function.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Basic operations
 
+;; Function to sum the samples (two lists):
 
 (defun sum-samples (x y)
     (mapcar '+ x y)
 )
 
+;; Divide the all elemments in list x by 
+;; one only number y.
+
 (defun div-func (x y)
     (mapcar #'(lambda (a) (/ a y)) x)
 )
+
+;; Function to calculate the standart deviation 
+;; of a given list of numbers x.
 
 (defun std-func (x)
     (let*
@@ -102,7 +108,12 @@
     )
 )
 
+;;;;;;;;;;;;;;;;;;;; Operation with samples and batchs
+
+; To calculate a avarage of the features of a given
+; batch. The results is a list with size *NF*
 ; Initialize count with '1
+
 (defun calc-avarages (sample batch SB count)
     (cond
         (
@@ -121,6 +132,9 @@
     )
 )
 
+;; Function to split the batch usgin the avarage
+;; for a given feature number. One result for one
+;; given feature.
 
 (defun func-target-mm (batch avarage SB num-pos)
     (let*
@@ -174,6 +188,9 @@
     )
 )
 
+;; Function to calculate the avarage of 
+;; a given number list.
+
 (defun calc-mean-list (target)
     (let
         (
@@ -186,6 +203,9 @@
         (/ S N)
     )
 )
+
+;; To calculate the standart deviation from a given
+;; list of number and a mean value.
 
 (defun calc-std (init mean values)
     (cond
@@ -222,6 +242,8 @@
     )
 ) 
 
+;; Function to calculate the MSE of a given
+;; feature, avarage feature and batch.
 
 (defun calc-mse (avarage batch SB num-pos)
     ;(format t "~S~%" avarage)
@@ -279,6 +301,8 @@
     )
 )
 
+;; Function to get the best split of a given batch
+;; The result is the feature with minimal MSE.
 
 (defun best-split (batch)
     (let*
@@ -349,7 +373,9 @@
 )
 
 
+;;;;;;;;;;;;;;;;;;;; Operations with nodes
 
+;; Function to obtain a node or a leaf.
 
 (defun build-node (batch)
     (multiple-value-bind 
@@ -395,7 +421,7 @@
     )
 )
 
-;;;;;;; Tools for work with trees in lists ;;;;;;;
+;;;;;;;;;;;;; Tools for work with trees in lists 
 
 ;;; Create a node: to make a format fallow by all other functions
 ;;; That's way works very well to precessing trees as lists.
@@ -455,9 +481,13 @@
     tree
 )
 
+;; Function to create a tree.
+
 (defun create-tree ()
     (make-node 'ROOT)
 )
+
+;; Function to build the tree with a given batch.
 
 (defun build-tree (tree batch)
     (let*
@@ -473,28 +503,26 @@
             )
             (build-node batch)
             (add-child tree (make-node node))
-            ;(format t "~S~%" tree)
             (setf bme batchmenor)
             (setf bma batchmaior)
         )
         (cond
             (
                 (equal (car (data (first-child tree))) 't)
-                ;
-                ;(format t "~S~%" (car (data (first-child tree))))
             )
             (
                 t
                 (add-brother (first-child tree) (make-node 'menor))
-                ;(format t "~S~%" (next-sibling tree))
                 (add-brother (first-child tree) (make-node 'maior))
-                ;(format t "~S~%" (next-sibling (next-sibling tree)))
                 (build-tree (next-sibling (first-child tree)) bme)
                 (build-tree (next-sibling (next-sibling (first-child tree))) bma)
             )
         )
     )
 )
+
+;; Function to use a tree for obtain the prediction
+;; for a given sample.
 
 (defun use-tree (tree sample)
     (let*
@@ -504,9 +532,6 @@
             (v-t (nth 1 node))
             (nf-pr (nth 2 node))
         )
-        ;(format t "~S~%" node)
-        ;(format t "~S~%" (data ))
-        ;(format t "~S~%" (data (first-child (next-sibling (next-sibling tree)))))
         (cond 
             (
                 (equal pass 't)
@@ -529,6 +554,11 @@
     )
 )
 
+
+;; Function to build the forest.
+;; Creating a list with one tree
+;; in each elemment.
+
 (defun build-forest (forest num-trees nsamples)
     (let*
         (
@@ -549,6 +579,9 @@
     )
 )
 
+;; Function to make a prediction for a 
+;; given sample using a given forest.
+
 (defun use-forest (forest sample)
     (let*
         (
@@ -566,6 +599,9 @@
     )
 )
 
+;; Function to make a experiment with given
+;; numbers of tree and a fraction of train 
+;; dataset for generate the batchs.
 
 (defun make-results (ntree frac)
     (let*
@@ -589,62 +625,5 @@
 )
 
 
-;(defvar *tree* (make-node 'ROOT))
-;(build-tree *tree* (gen-min-batch *train-data* *Size-Batch* *Ntest*))
-
-#|
-(let*
-    (
-        (ntree (list '100 '500 '1000 '1500 '2000))
-        (N (length ntree))
-    )
-    (dotimes (n N)
-        (let*
-            (
-                (results (make-results (nth n ntree) 0.45))
-            )
-            (format t "######### ~S~%" n)
-            (format t "Em: ~S +-~S ~%~%" (car results) (std-func (car (cdr results))))
-        )
-    )
-)
-|#
-
-(let*
-    (
-        (frac '(0.1 0.2 0.3 0.4 0.5 0.6 0.7))
-        (N (length frac))
-    )
-    (dotimes (n N)
-        (let*
-            (
-                (results (make-results 500 (nth n frac)))
-            )
-            (format t "######### ~S~%" n)
-            (format t "Em: ~S +-~S (~S) ~%~%"
-                (car results)
-                (std-func (car (cdr results)))
-                (nth n frac)
-            )
-        )
-    )
-)
-
-;(format t "~S~%" (std-func '(1.2 0.8 1.2 0.8)))
-
-#|
-(let*
-    (
-        (sample (car *test-data*))
-        (prediction (use-tree (cdr (car *tree*)) sample))
-    )
-    (format t "P:~S, T:~S, diff: ~S, pp: ~S ~%" 
-        (car prediction)
-        (car (last sample))
-        (- (car prediction) (car (last sample)))
-        (cdr prediction)
-    )  
-)
-|#
 
 ;EOF
