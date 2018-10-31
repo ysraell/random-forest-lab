@@ -1,8 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Load model parameters
-(load "model-parm.lisp")
-
 ; Load function for randomly selection features and samples.
 (load "rand_perm.lisp")
 
