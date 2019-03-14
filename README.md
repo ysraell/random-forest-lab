@@ -24,7 +24,7 @@ A Practical End-to-End Machine Learning Example (William Koehrsen).
 
  - **RFCLP**: Random forest classifier write from scratch in Lisp. With pruning step and quantization of numeric features in feature space.
 
- - **RFRLP**: Random forest regressor write from scratch in Lisp. Using the same algorthm from **RFRPY**.
+ - **RFRLP**: Random forest regressor write from scratch in Lisp. Using a improved version of the algorthm from **RFRPY**.
 
 _license_: BSD 3-Clause License. _Copyright_ (c) 2018, Israel Gonçalves de Oliveira. _All rights_ reserved.
 
