@@ -60,3 +60,5 @@ Please cite using the following BibTex entry:
 ```
 
 ---
+
+[A good article about Random Forest and feature importance](https://medium.com/turo-engineering/how-not-to-use-random-forest-265a19a68576)
