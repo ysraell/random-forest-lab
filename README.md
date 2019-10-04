@@ -61,6 +61,8 @@ Please cite using the following BibTex entry:
 
 ---
 
-[A good article about Random Forest and feature importance](https://medium.com/turo-engineering/how-not-to-use-random-forest-265a19a68576)
+- A good article about Random Forest and feature importance: [](https://medium.com/turo-engineering/how-not-to-use-random-forest-265a19a68576).
 
-[An Implementation and Explanation of the Random Forest in Python](https://towardsdatascience.com/an-implementation-and-explanation-of-the-random-forest-in-python-77bf308a9b76)
+- [An Implementation and Explanation of the Random Forest in Python](https://towardsdatascience.com/an-implementation-and-explanation-of-the-random-forest-in-python-77bf308a9b76).
+
+- I strongly recommend this one first: [The Simple Math behind 3 Decision Tree Splitting criterions](https://towardsdatascience.com/the-simple-math-behind-3-decision-tree-splitting-criterions-85d4de2a75fe).
